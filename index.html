@@ -11,7 +11,7 @@
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -63,6 +63,160 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-采用递归和非递归方法求解Hanoi问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2021-04-06T04:49:00.874Z" itemprop="datePublished">2021-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>目的：领会基本递归算法设计和递归到非递归的转换方法</p>
+</blockquote>
+<blockquote>
+<p>内容：编写一个程序exp5-1.cpp，采用递归和非递归方法求解Hanoi问题，输出三个盘片的移动过程</p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>题目是昨天老师发在学习通上的，目前</p>
+</blockquote>
+<p>解决了:</p>
+<ol>
+<li>Hanoi问题理解</li>
+<li>Hanoi递归算法及其实现</li>
+</ol>
+<p>未解决的:</p>
+<ol start="3">
+<li>Hanoi非递归算法及实现<br>(PPT上是用栈来实现的，然而笔者对栈不熟…解决完再记上来吧)<blockquote>
+<p>以下就从解决了的两个方面展开讨论</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="Hanoi问题理解"><a href="#Hanoi问题理解" class="headerlink" title="Hanoi问题理解"></a>Hanoi问题理解</h5><p>笔者参考的是算法动态图解app上的解释，还挺直观的:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410110146630-1399934786.gif"></p>
+<p>简单来说就是有X，Y，Z三个柱子，目标是将X柱子上的盘片移动到Y柱子上，同时要保持和X柱相同的顺序。X柱子上盘片自下而上、由大到小放置着n个盘片，两个要求:</p>
+<p>Ⅰ. 一次只能移一个盘片</p>
+<p>Ⅱ.不能把大盘片放在小盘片上</p>
+<p>个人的理解:<br>首先，为了方便分析，将X柱上盘片自上而下依次编号为$1,2…n$</p>
+<ul>
+<li>当n=1时，即X柱上只有一个盘片，直接从X移动到Z，这是最简单的情况</li>
+<li>当n=2 时，<br>第一步，把1号移动到Y柱(因为要满足要求Ⅱ，2号盘片必须第一个移动到Z柱上，那么必须把1号先移开，移动到哪里？肯定不能是Z柱，那么就是Y柱了)<br>第二步，把2号盘移到Z柱<br>第三步，把1号从Y柱移动到Z柱，完成！</li>
+<li>当n=3时，<br> 第一步，可以把1号，2号盘，通过Z柱移到Y柱，这在前面(n=2时)已经证明可行。<br> 第二步，把3号盘移到Y柱<br> 第三步，发现问题转化为n=2的情况，即把1号，2号盘，从Y柱移动到Z柱，方法参见n=2，不再赘述</li>
+</ul>
+<p>写到这里，我们发现这个问题是可递归的，n个盘片的Hanoi问题可以通过n-1个盘片的Hanoi问题求得，抽象成数学语言就是$$f(n)=g(f(n-1)，c_{n-1},<br>,f(1)=m_1$$</p>
+<p>要求$f(n)$，可先求$f(n-1)，f(n-2)…$，层层递归，直到$f(1)$</p>
+<hr>
+<h5 id="Hanoi递归算法及其实现"><a href="#Hanoi递归算法及其实现" class="headerlink" title="Hanoi递归算法及其实现"></a>Hanoi递归算法及其实现</h5><h6 id="递归模型及递归算法"><a href="#递归模型及递归算法" class="headerlink" title="递归模型及递归算法"></a>递归模型及递归算法</h6><ul>
+<li><p>设计递归模型<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410113552631-1587432687.png"><br>可以看出递归模型分为递归体，递归出口两个部分，其实就是高中数学数列，递归函数概念</p>
+</li>
+<li><p>设计递归算法(以本题为例)<br>把盘片数，X柱，Y柱，Z柱分别抽象成自定义函数的四个参数n,X,Y,Z</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void Hanoi1(int n，char X，char Y，char Z)</span><br></pre></td></tr></table></figure>
+<p>分别用if语句，else语句描述递归出口与递归体</p>
+</li>
+<li><p>算法代码:</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归法</span><br><span class="line">void Hanoi1(int n,char X,char Y,char Z)&#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">        if(n&#x3D;&#x3D;1)&#123;</span><br><span class="line">        printf(&quot;\t将第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;递归出口，当只有一个盘片时     &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">        Hanoi1 (n-1,X,Z,Y);&#x2F;&#x2F;将n-1个盘片，通过z,从x移动到y</span><br><span class="line">        printf (&quot;\t把第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;将第n个盘片，从x移动到z</span><br><span class="line">        Hanoi1 (n-1,Y,X,Z);&#x2F;&#x2F;将n-1个盘片，通过x,从y移动到z</span><br><span class="line">        </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="Hanoi递归算法的实现"><a href="#Hanoi递归算法的实现" class="headerlink" title="Hanoi递归算法的实现"></a>Hanoi递归算法的实现</h6><p>理解了算法代码的实现，接下来就就是”搬砖”阶段了</p>
+<blockquote>
+<p>在main()函数里分别初始化三个参数的值，然后调用Hanoi1()就可以了</p>
+</blockquote>
+<p>完整代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归法</span><br><span class="line">void Hanoi1(int n,char X,char Y,char Z)&#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">        if(n&#x3D;&#x3D;1)&#123;</span><br><span class="line">        printf(&quot;\t将第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;递归出口，当只有一个盘片时</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Hanoi1 (n-1,X,Z,Y);&#x2F;&#x2F;将n-1个盘片，通过z,从x移动到y</span><br><span class="line">        printf (&quot;\t把第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;将第n个盘片，从x移动到z</span><br><span class="line">        Hanoi1 (n-1,Y,X,Z);&#x2F;&#x2F;将n-1个盘片，通过x,从y移动到z</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int n&#x3D;3;</span><br><span class="line">    char X&#x3D;&#39;x&#39;,Y&#x3D;&#39;y&#39;,Z&#x3D;&#39;z&#39;;</span><br><span class="line">    cout &lt;&lt;&quot;递归法过程:&quot;&lt;&lt;endl;</span><br><span class="line">    Hanoi1 (n,X,Y,Z);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>运行截图:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410110306245-1704506698.png"></p>
+<hr>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>  在”搬砖”的过程中，出现了许多错误，变量未初始化(uninitialzing)，函数未指名(not declared)  …原因在于没有经历完整的c语言编程过程，只是看教材的代码，效率确实太低了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" data-id="ckn5jnu170000wskddphj5s3t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-数值分析之插值法总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2021-04-06T04:47:24.105Z" itemprop="datePublished">2021-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>  前段时间学习了插值法，虽然当时跟着老师的步骤，将公式推导了出来，但是也还有一些问题没有解决，为了防止遗忘，我把它们都记录在这里，主要分为两部分:</p>
+<blockquote>
+<p>1.知识结构梳理</p>
+</blockquote>
+<blockquote>
+<p>2.重要公式推导</p>
+</blockquote>
+<hr>
+<h4 id="知识结构梳理"><a href="#知识结构梳理" class="headerlink" title="知识结构梳理"></a>知识结构梳理</h4><h5 id="概念的引入"><a href="#概念的引入" class="headerlink" title="概念的引入"></a><strong>概念的引入</strong></h5><p><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200403020651666-1125867375.jpg"></p>
+<p>  当函数$f(x)$很复杂的时候，用一个简单易算的函数$p(x)$近似，其中$p(x)$是用一系列节点和节点处的函数值构造出来的:<br>  一个区间范围插入$n+1$个点 $x_0,x_1…x_n$得到$n+1$个函数值$f(x_i)(i=0,1…n)$<br>如果$p(x)$满足:$p(x_i)=f(x_i)(i=0,1..n),$则称$p(x)$为$f(x)$的$n$次插值函数,求$p(x)$的方法称为插值法<br>$p(x)$常为多项式</p>
+<h5 id="几个重要的插值法"><a href="#几个重要的插值法" class="headerlink" title="几个重要的插值法"></a><strong>几个重要的插值法</strong></h5><h6 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h6><blockquote>
+<p> <em>从一次插值开始，到二次插值，再推广至n次</em></p>
+</blockquote>
+<h6 id="均差与牛顿插值"><a href="#均差与牛顿插值" class="headerlink" title="均差与牛顿插值"></a>均差与牛顿插值</h6><h6 id="样条插值"><a href="#样条插值" class="headerlink" title="样条插值"></a>样条插值</h6><hr>
+<h4 id="公式推导"><a href="#公式推导" class="headerlink" title="公式推导"></a>公式推导</h4><h5 id="拉格朗日插值-基函数法"><a href="#拉格朗日插值-基函数法" class="headerlink" title="拉格朗日插值:基函数法"></a>拉格朗日插值:基函数法</h5><ol>
+<li><p>一次插值:<br> 两个插值节点:$(x_0,y_0),(x_1,y_1)$用点斜式$l(x)=y_0+\frac{y_1-y_0}{x_1-x_0}(x-x_0)$<br>整理一下得到</p>
+<blockquote>
+<p>$l(x)=y_0\frac{x-x_1}{x_0-x_1}+y_1\frac{x-x_0}{x_1-x_0}$<br>令$l_0=\frac{x-x_1}{x_0-x_1}\quad         l_1=\frac{x-x_0}{x_1-x_0}$</p>
+</blockquote>
+<p>将公式进一步简化:</p>
+<blockquote>
+<p>$$l_1(x)= \sum_{i=0}^{1} {l_iy_i}$$<br>其中$l_i$就是所谓的基函数。<br>2.二次插值:和一次相同的方法得到<br>$$l_2(x)= \sum_{i=0}^{2} {l_iy_i}$$</p>
+</blockquote>
+<p>对于其中基函数$l_i$的求法一开始反应不过来，看了PPT才恍然大悟  因为对于插值函数<br>肯定要满足:<br><font color="red">$l_2(x_j)=y_j (j=0,1,2)$</font><br>将$y_j$的三个值分别代入，显然可以得到:</p>
+<blockquote>
+<p>$l_2(x_0)=y_0$<br>$l_2(x_1)=y_1$<br>$l_2(x_2)=y_2$</p>
+</blockquote>
+<p>可以看出在插值函数表达式中，只有和x下标相同的那项被保留了下来。由此可推出:</p>
+<blockquote>
+<p>$l_0(x_0)=1, l_0(x_1)=0, l_0(x_2)=0$<br>$l_1(x_0)=0, l_1(x_1)=1, l_1(x_2)=0$<br>$l_2(x_0)=0, l_2(x_1)=0, l_2(x_2)=1$</p>
+</blockquote>
+<p>满足上面这些条件，求基函数显然变简单了，例如求$l_0$可设$$l_0(x)=A_0(x-x_1)(x-x_2)$$将$x_0$代入这个式子，可以求出</p>
+<blockquote>
+<p>$A_0=\frac{1}{(x_0-x_1)(x_0-x_2)}$</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>$l_0(x)=\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}$</p>
+</blockquote>
+<p>  同理可以求得$l_1(x)，l_2(x)$<br>3.n次插值<br>这一部分已经不大记得清了，当时推导也花了近一节课，最终公式如下:<br>$$l_n(x)=y_0l_0+y_1l_1+…y_nl_n=\sum_{i=0}^{n} {l_iy_i}$$<br>其中:<br>$$<br>l_i=\frac{\overbrace{(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_{i+1})…(x-x_n)}^{n个项}}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x-x_{i+1})…(x-x_n)}\<br>    =\prod_{j≠i,j=0}^{n} \frac{(x-x_j)}{(x_i-x_j)}<br>$$</p>
+<p>注意此公式的分子<font color="red">不含$(x-x_i)$项</font></p>
+<p><del>推导过程就不写了，也记不得了，回头再加上…..</del></p>
+<hr>
+<p>2020.4.2更新  :<br>今天翻笔记本，发现了之前的推导笔记，喜出望外——不用再重新推导一遍了，特来更新一波~<br>  对于n次插值基函数$l_i$的表达式，其实可以从一次，二次表达式中归纳出来，相信读者是和我一样想的，但是为了保持严谨，还是一步一步推导吧！<br>先补充说明一下，这里$l_i(x_j)$有个专门的叫法:拉氏基函数，满足条件:<br>$$l_i(x_j)=\delta_{ij}= \begin{cases}0&amp;&amp;j≠i\ \ 1 &amp;&amp;j=i\end{cases}$$<br>显然每个$l_i$都有$不含x_i的n$个根:<br>$$x_0,x_1…x_{i-1},x_i…x_{n-1},x_n$$<br>可设<br>$$l_i(x)=A_i(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_i)…(x-x{n-1})(x-x_n)$$<br>$$=\prod_{j≠i,j=0}^{n}A_i(x-x_j)$$<br>由$l_i(x_i)=1$，得$$A_i=\frac{1}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>代入上面$l_i$的公式得:<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)},满足l_i(x_j)=\delta_{ij}$$<br>现在已经推导出$l_i$的表达式了，把它代入插值函数<br>$$L_n(x)=\sum_{i=0}^{n}l_i(x)y_i即可得到<br>L_n(x)=\sum_{i=0}^{n}[\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}y_i]$$<br>引入一个记号<br>$$\omega_{n+1}(x)=(x-x_0)(x-x_1)…(x-x_n)$$<br><del>不含(x-x_i)项，这里容易误解，明明是n个点，为什么$\omega$的下标是n+1?也许两者之间并无关联吧，</del><br>emmm…是笔者理解错误，后面求导时发现的,额…继续往下做，话说当老师讲到引入这个记号时，笔者心想大概就是要将$L_n(x)$的表达式转换成含$\omega_{n+1}(x)$的形式了，只是不知道有什么用…继续继续，第一步是对<br>$\omega_{n+1}(x)$求一阶导，根据求导的定义，分别对这n+1项求导，有:<br>$$\omega’<em>{n+1}(x)=(x-x_0)’(x-x_1)…(x-x_n)+(x-x_0)(x-x_1)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_i)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x_n)’$$<br>显然$\omega’<em>{n+1}(x)$的这个式子有$n+1$项<br>好了，第二步:将$x=x_i$代入上式，<font color="red">所有含$(x-x_i)$的项都化为0</font><br>原式化为:<br>$$\omega’</em>{n+1}(x_i)=(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_n)$$<br>可以看出只有对$(x-x_i)$一项求导的留了下来。<br>从而推出<br>$$\omega’<em>{n+1}(x)=(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_{i+1})…(x-x_n)$$<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>$$=\frac{\omega_{n+1}(x)}{(x-x_i) \omega’_{n+1}(x)}$$</p>
+<hr>
+<p>最终n次插值函数$L_n(x)$的表达式为:<br>$$L_n(x)=\sum_{i=0}^{n}y_i \frac{\omega_{n+1}(x)}{(x-x_i)\omega’_{n+1}(x)}$$<br>推导完成!</p>
+<hr>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>  这篇文章花费了远超预计的时间，主要是用手机打latex公式太慢了，另外还有排板，好在总算完成了，数值分析有点复杂，但是只要努力就一定能学好，加油～</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" data-id="ckn5jnu1h0001wskd9sy63647" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-实现顺序串的各种模式匹配算法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -331,7 +485,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li></ul>
     </div>
   </div>
 
@@ -344,6 +498,14 @@
       <ul>
         
           <li>
+            <a href="/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">实现顺序串的各种模式匹配算法</a>
           </li>
         
@@ -353,10 +515,6 @@
         
           <li>
             <a href="/2020/09/09/2020-9-9/">2020.9.9</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/09/hello-world/">Hello World</a>
           </li>
         
       </ul>
