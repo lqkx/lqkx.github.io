@@ -1,566 +1,590 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
 
+
+<!DOCTYPE html>
+<html lang="zh_CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
   
   <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.1.1"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Startseite
+              </a>
+            </li>
+          
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archiv
+              </a>
+            </li>
+          
         
-      </nav>
-      <nav id="sub-nav">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Kategorie
+              </a>
+            </li>
+          
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Etiketten
+              </a>
+            </li>
+          
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-采用递归和非递归方法求解Hanoi问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2021-04-06T04:49:00.874Z" itemprop="datePublished">2021-04-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>目的：领会基本递归算法设计和递归到非递归的转换方法</p>
-</blockquote>
-<blockquote>
-<p>内容：编写一个程序exp5-1.cpp，采用递归和非递归方法求解Hanoi问题，输出三个盘片的移动过程</p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>题目是昨天老师发在学习通上的，目前</p>
-</blockquote>
-<p>解决了:</p>
-<ol>
-<li>Hanoi问题理解</li>
-<li>Hanoi递归算法及其实现</li>
-</ol>
-<p>未解决的:</p>
-<ol start="3">
-<li>Hanoi非递归算法及实现<br>(PPT上是用栈来实现的，然而笔者对栈不熟…解决完再记上来吧)<blockquote>
-<p>以下就从解决了的两个方面展开讨论</p>
-</blockquote>
-</li>
-</ol>
-<h5 id="Hanoi问题理解"><a href="#Hanoi问题理解" class="headerlink" title="Hanoi问题理解"></a>Hanoi问题理解</h5><p>笔者参考的是算法动态图解app上的解释，还挺直观的:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410110146630-1399934786.gif"></p>
-<p>简单来说就是有X，Y，Z三个柱子，目标是将X柱子上的盘片移动到Y柱子上，同时要保持和X柱相同的顺序。X柱子上盘片自下而上、由大到小放置着n个盘片，两个要求:</p>
-<p>Ⅰ. 一次只能移一个盘片</p>
-<p>Ⅱ.不能把大盘片放在小盘片上</p>
-<p>个人的理解:<br>首先，为了方便分析，将X柱上盘片自上而下依次编号为$1,2…n$</p>
-<ul>
-<li>当n=1时，即X柱上只有一个盘片，直接从X移动到Z，这是最简单的情况</li>
-<li>当n=2 时，<br>第一步，把1号移动到Y柱(因为要满足要求Ⅱ，2号盘片必须第一个移动到Z柱上，那么必须把1号先移开，移动到哪里？肯定不能是Z柱，那么就是Y柱了)<br>第二步，把2号盘移到Z柱<br>第三步，把1号从Y柱移动到Z柱，完成！</li>
-<li>当n=3时，<br> 第一步，可以把1号，2号盘，通过Z柱移到Y柱，这在前面(n=2时)已经证明可行。<br> 第二步，把3号盘移到Y柱<br> 第三步，发现问题转化为n=2的情况，即把1号，2号盘，从Y柱移动到Z柱，方法参见n=2，不再赘述</li>
-</ul>
-<p>写到这里，我们发现这个问题是可递归的，n个盘片的Hanoi问题可以通过n-1个盘片的Hanoi问题求得，抽象成数学语言就是$$f(n)=g(f(n-1)，c_{n-1},<br>,f(1)=m_1$$</p>
-<p>要求$f(n)$，可先求$f(n-1)，f(n-2)…$，层层递归，直到$f(1)$</p>
-<hr>
-<h5 id="Hanoi递归算法及其实现"><a href="#Hanoi递归算法及其实现" class="headerlink" title="Hanoi递归算法及其实现"></a>Hanoi递归算法及其实现</h5><h6 id="递归模型及递归算法"><a href="#递归模型及递归算法" class="headerlink" title="递归模型及递归算法"></a>递归模型及递归算法</h6><ul>
-<li><p>设计递归模型<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410113552631-1587432687.png"><br>可以看出递归模型分为递归体，递归出口两个部分，其实就是高中数学数列，递归函数概念</p>
-</li>
-<li><p>设计递归算法(以本题为例)<br>把盘片数，X柱，Y柱，Z柱分别抽象成自定义函数的四个参数n,X,Y,Z</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void Hanoi1(int n，char X，char Y，char Z)</span><br></pre></td></tr></table></figure>
-<p>分别用if语句，else语句描述递归出口与递归体</p>
-</li>
-<li><p>算法代码:</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归法</span><br><span class="line">void Hanoi1(int n,char X,char Y,char Z)&#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">        if(n&#x3D;&#x3D;1)&#123;</span><br><span class="line">        printf(&quot;\t将第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;递归出口，当只有一个盘片时     &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">        Hanoi1 (n-1,X,Z,Y);&#x2F;&#x2F;将n-1个盘片，通过z,从x移动到y</span><br><span class="line">        printf (&quot;\t把第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;将第n个盘片，从x移动到z</span><br><span class="line">        Hanoi1 (n-1,Y,X,Z);&#x2F;&#x2F;将n-1个盘片，通过x,从y移动到z</span><br><span class="line">        </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h6 id="Hanoi递归算法的实现"><a href="#Hanoi递归算法的实现" class="headerlink" title="Hanoi递归算法的实现"></a>Hanoi递归算法的实现</h6><p>理解了算法代码的实现，接下来就就是”搬砖”阶段了</p>
-<blockquote>
-<p>在main()函数里分别初始化三个参数的值，然后调用Hanoi1()就可以了</p>
-</blockquote>
-<p>完整代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归法</span><br><span class="line">void Hanoi1(int n,char X,char Y,char Z)&#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">        if(n&#x3D;&#x3D;1)&#123;</span><br><span class="line">        printf(&quot;\t将第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;递归出口，当只有一个盘片时</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Hanoi1 (n-1,X,Z,Y);&#x2F;&#x2F;将n-1个盘片，通过z,从x移动到y</span><br><span class="line">        printf (&quot;\t把第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;将第n个盘片，从x移动到z</span><br><span class="line">        Hanoi1 (n-1,Y,X,Z);&#x2F;&#x2F;将n-1个盘片，通过x,从y移动到z</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int n&#x3D;3;</span><br><span class="line">    char X&#x3D;&#39;x&#39;,Y&#x3D;&#39;y&#39;,Z&#x3D;&#39;z&#39;;</span><br><span class="line">    cout &lt;&lt;&quot;递归法过程:&quot;&lt;&lt;endl;</span><br><span class="line">    Hanoi1 (n,X,Y,Z);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>运行截图:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410110306245-1704506698.png"></p>
-<hr>
-<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>  在”搬砖”的过程中，出现了许多错误，变量未初始化(uninitialzing)，函数未指名(not declared)  …原因在于没有经历完整的c语言编程过程，只是看教材的代码，效率确实太低了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" data-id="ckn5jnu170000wskddphj5s3t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-数值分析之插值法总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" class="article-date">
-  <time datetime="2021-04-06T04:47:24.105Z" itemprop="datePublished">2021-04-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>  前段时间学习了插值法，虽然当时跟着老师的步骤，将公式推导了出来，但是也还有一些问题没有解决，为了防止遗忘，我把它们都记录在这里，主要分为两部分:</p>
-<blockquote>
-<p>1.知识结构梳理</p>
-</blockquote>
-<blockquote>
-<p>2.重要公式推导</p>
-</blockquote>
-<hr>
-<h4 id="知识结构梳理"><a href="#知识结构梳理" class="headerlink" title="知识结构梳理"></a>知识结构梳理</h4><h5 id="概念的引入"><a href="#概念的引入" class="headerlink" title="概念的引入"></a><strong>概念的引入</strong></h5><p><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200403020651666-1125867375.jpg"></p>
-<p>  当函数$f(x)$很复杂的时候，用一个简单易算的函数$p(x)$近似，其中$p(x)$是用一系列节点和节点处的函数值构造出来的:<br>  一个区间范围插入$n+1$个点 $x_0,x_1…x_n$得到$n+1$个函数值$f(x_i)(i=0,1…n)$<br>如果$p(x)$满足:$p(x_i)=f(x_i)(i=0,1..n),$则称$p(x)$为$f(x)$的$n$次插值函数,求$p(x)$的方法称为插值法<br>$p(x)$常为多项式</p>
-<h5 id="几个重要的插值法"><a href="#几个重要的插值法" class="headerlink" title="几个重要的插值法"></a><strong>几个重要的插值法</strong></h5><h6 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h6><blockquote>
-<p> <em>从一次插值开始，到二次插值，再推广至n次</em></p>
-</blockquote>
-<h6 id="均差与牛顿插值"><a href="#均差与牛顿插值" class="headerlink" title="均差与牛顿插值"></a>均差与牛顿插值</h6><h6 id="样条插值"><a href="#样条插值" class="headerlink" title="样条插值"></a>样条插值</h6><hr>
-<h4 id="公式推导"><a href="#公式推导" class="headerlink" title="公式推导"></a>公式推导</h4><h5 id="拉格朗日插值-基函数法"><a href="#拉格朗日插值-基函数法" class="headerlink" title="拉格朗日插值:基函数法"></a>拉格朗日插值:基函数法</h5><ol>
-<li><p>一次插值:<br> 两个插值节点:$(x_0,y_0),(x_1,y_1)$用点斜式$l(x)=y_0+\frac{y_1-y_0}{x_1-x_0}(x-x_0)$<br>整理一下得到</p>
-<blockquote>
-<p>$l(x)=y_0\frac{x-x_1}{x_0-x_1}+y_1\frac{x-x_0}{x_1-x_0}$<br>令$l_0=\frac{x-x_1}{x_0-x_1}\quad         l_1=\frac{x-x_0}{x_1-x_0}$</p>
-</blockquote>
-<p>将公式进一步简化:</p>
-<blockquote>
-<p>$$l_1(x)= \sum_{i=0}^{1} {l_iy_i}$$<br>其中$l_i$就是所谓的基函数。<br>2.二次插值:和一次相同的方法得到<br>$$l_2(x)= \sum_{i=0}^{2} {l_iy_i}$$</p>
-</blockquote>
-<p>对于其中基函数$l_i$的求法一开始反应不过来，看了PPT才恍然大悟  因为对于插值函数<br>肯定要满足:<br><font color="red">$l_2(x_j)=y_j (j=0,1,2)$</font><br>将$y_j$的三个值分别代入，显然可以得到:</p>
-<blockquote>
-<p>$l_2(x_0)=y_0$<br>$l_2(x_1)=y_1$<br>$l_2(x_2)=y_2$</p>
-</blockquote>
-<p>可以看出在插值函数表达式中，只有和x下标相同的那项被保留了下来。由此可推出:</p>
-<blockquote>
-<p>$l_0(x_0)=1, l_0(x_1)=0, l_0(x_2)=0$<br>$l_1(x_0)=0, l_1(x_1)=1, l_1(x_2)=0$<br>$l_2(x_0)=0, l_2(x_1)=0, l_2(x_2)=1$</p>
-</blockquote>
-<p>满足上面这些条件，求基函数显然变简单了，例如求$l_0$可设$$l_0(x)=A_0(x-x_1)(x-x_2)$$将$x_0$代入这个式子，可以求出</p>
-<blockquote>
-<p>$A_0=\frac{1}{(x_0-x_1)(x_0-x_2)}$</p>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p>$l_0(x)=\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}$</p>
-</blockquote>
-<p>  同理可以求得$l_1(x)，l_2(x)$<br>3.n次插值<br>这一部分已经不大记得清了，当时推导也花了近一节课，最终公式如下:<br>$$l_n(x)=y_0l_0+y_1l_1+…y_nl_n=\sum_{i=0}^{n} {l_iy_i}$$<br>其中:<br>$$<br>l_i=\frac{\overbrace{(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_{i+1})…(x-x_n)}^{n个项}}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x-x_{i+1})…(x-x_n)}\<br>    =\prod_{j≠i,j=0}^{n} \frac{(x-x_j)}{(x_i-x_j)}<br>$$</p>
-<p>注意此公式的分子<font color="red">不含$(x-x_i)$项</font></p>
-<p><del>推导过程就不写了，也记不得了，回头再加上…..</del></p>
-<hr>
-<p>2020.4.2更新  :<br>今天翻笔记本，发现了之前的推导笔记，喜出望外——不用再重新推导一遍了，特来更新一波~<br>  对于n次插值基函数$l_i$的表达式，其实可以从一次，二次表达式中归纳出来，相信读者是和我一样想的，但是为了保持严谨，还是一步一步推导吧！<br>先补充说明一下，这里$l_i(x_j)$有个专门的叫法:拉氏基函数，满足条件:<br>$$l_i(x_j)=\delta_{ij}= \begin{cases}0&amp;&amp;j≠i\ \ 1 &amp;&amp;j=i\end{cases}$$<br>显然每个$l_i$都有$不含x_i的n$个根:<br>$$x_0,x_1…x_{i-1},x_i…x_{n-1},x_n$$<br>可设<br>$$l_i(x)=A_i(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_i)…(x-x{n-1})(x-x_n)$$<br>$$=\prod_{j≠i,j=0}^{n}A_i(x-x_j)$$<br>由$l_i(x_i)=1$，得$$A_i=\frac{1}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>代入上面$l_i$的公式得:<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)},满足l_i(x_j)=\delta_{ij}$$<br>现在已经推导出$l_i$的表达式了，把它代入插值函数<br>$$L_n(x)=\sum_{i=0}^{n}l_i(x)y_i即可得到<br>L_n(x)=\sum_{i=0}^{n}[\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}y_i]$$<br>引入一个记号<br>$$\omega_{n+1}(x)=(x-x_0)(x-x_1)…(x-x_n)$$<br><del>不含(x-x_i)项，这里容易误解，明明是n个点，为什么$\omega$的下标是n+1?也许两者之间并无关联吧，</del><br>emmm…是笔者理解错误，后面求导时发现的,额…继续往下做，话说当老师讲到引入这个记号时，笔者心想大概就是要将$L_n(x)$的表达式转换成含$\omega_{n+1}(x)$的形式了，只是不知道有什么用…继续继续，第一步是对<br>$\omega_{n+1}(x)$求一阶导，根据求导的定义，分别对这n+1项求导，有:<br>$$\omega’<em>{n+1}(x)=(x-x_0)’(x-x_1)…(x-x_n)+(x-x_0)(x-x_1)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_i)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x_n)’$$<br>显然$\omega’<em>{n+1}(x)$的这个式子有$n+1$项<br>好了，第二步:将$x=x_i$代入上式，<font color="red">所有含$(x-x_i)$的项都化为0</font><br>原式化为:<br>$$\omega’</em>{n+1}(x_i)=(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_n)$$<br>可以看出只有对$(x-x_i)$一项求导的留了下来。<br>从而推出<br>$$\omega’<em>{n+1}(x)=(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_{i+1})…(x-x_n)$$<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>$$=\frac{\omega_{n+1}(x)}{(x-x_i) \omega’_{n+1}(x)}$$</p>
-<hr>
-<p>最终n次插值函数$L_n(x)$的表达式为:<br>$$L_n(x)=\sum_{i=0}^{n}y_i \frac{\omega_{n+1}(x)}{(x-x_i)\omega’_{n+1}(x)}$$<br>推导完成!</p>
-<hr>
-<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>  这篇文章花费了远超预计的时间，主要是用手机打latex公式太慢了，另外还有排板，好在总算完成了，数值分析有点复杂，但是只要努力就一定能学好，加油～</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" data-id="ckn5jnu1h0001wskd9sy63647" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-实现顺序串的各种模式匹配算法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/" class="article-date">
-  <time datetime="2021-04-05T11:19:14.000Z" itemprop="datePublished">2021-04-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                Über mich
+              </a>
+            </li>
+          
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">实现顺序串的各种模式匹配算法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>目的：掌握串的模式匹配算法（BF和KMP ）设计</p>
-</blockquote>
-<blockquote>
-<p>内容：编写一个程序exp4-3.cpp，实现顺序串的各种模式匹配运算，并在此基础上完成以下功能:<br>1、建立目标串s=”abcabcdabcdeabcdefabcdefg”和模式串t=”abcdeabcdefab”；<br>2、采用简单匹配算法求t在s中的位置；<br>3、由模式串t求next数组值和nextval数组值；<br>4、采用KMP算法求t在s中的位置；<br>5、采用改进的KMP算法求t在s中的位置；</p>
-</blockquote>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>  今天学习了如何对顺序串相关的算法，主要是看老师的PPT，问题主要分两方面:</p>
-<ol>
-<li><strong>算法的理解</strong></li>
-<li><strong>算法的实现</strong><br>以下主要就从这两个方面进行讨论</li>
-</ol>
-<hr>
-<h5 id="算法的理解"><a href="#算法的理解" class="headerlink" title="算法的理解"></a>算法的理解</h5><p>   这道题目主要涉及的算法有BF，KMP。这两个算法都是用来判定模式串t是否为目标串s的子串问题，其中BF算法感觉还挺简单的，就是<font color="red">从s的每一个字符开始依次与t的字符进行匹配</font><br>匹配过程如下:</p>
-<ol>
-<li>$$S: \color{red}a\quad a\quad a\quad a\quad a\quad b$$<br>$$ T:\color{red}a\quad a\quad a\quad b$$<br>此时i=0,y=0  s[0]=t[0]<br>i,j继续后移,即i++, j++,直到出现s[i]≠t[j]</li>
-<li>$$S: a\quad a\quad a\quad \color{red}a\quad a\quad b$$<br>$$ T:a\quad a\quad a\quad \color{red}b$$<br>此时i=3,y=3 s[3]≠t[3] 匹配失败<br><font color="red"> i回退，j重置为0(i=i-j+1,j=0)</font><br>循环执行1,2步</li>
-<li>$$S: a\quad a\quad a\quad a\quad a\quad \color{red}b$$<br>$$ T:a\quad a\quad a\quad \color{red}b$$<br>此时i=6,y=4 s[6]=t[4] 匹配成功!</li>
-</ol>
-<hr>
-<p>总的说来，BF算法的关键在于匹配失败时对i,j的处理。</p>
-<h5 id="算法的实现"><a href="#算法的实现" class="headerlink" title="算法的实现"></a>算法的实现</h5> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;BF算法</span><br><span class="line">int BF(SqString s,SqString t)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;0,j&#x3D;0;</span><br><span class="line">    while (i&lt;s.length &amp;&amp; j&lt;t.length )</span><br><span class="line">    &#123;</span><br><span class="line">        if(s.data[i]&#x3D;&#x3D;t.data[j] )</span><br><span class="line">        &#123;</span><br><span class="line">            i++;</span><br><span class="line">            j++;&#x2F;&#x2F;继续匹配下一个字符，依次匹配</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            i&#x3D;i-j+1;&#x2F;&#x2F;主串的指针回溯</span><br><span class="line">            j&#x3D;0;</span><br><span class="line">        </span><br><span class="line">        &#125;&#x2F;&#x2F;进行下一次匹配</span><br><span class="line">    &#125;</span><br><span class="line">          </span><br><span class="line">    if(j&gt;&#x3D;t.length )</span><br><span class="line">       </span><br><span class="line">    return (i-t.length );&#x2F;&#x2F;返回匹配的第一个位置的下标，因为是依次进行匹配，所以最终i的值会有包含字串t的长度。</span><br><span class="line">    else return (-1);</span><br><span class="line">       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  在阅读这段代码的时候while语句里的循环条件:<code>while (i&lt;s.length &amp;&amp; j&lt;t.length )</code>不是很好理解，后来仔细检查发现i,j都是从0开始，那么它们代表的是字符串中字符位置的下标，取<br>0–(length-1)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;主函数</span><br><span class="line">int main() &#123;</span><br><span class="line">    SqString s,t;</span><br><span class="line">    </span><br><span class="line">    char a[]&#x3D;&quot;abcabcdabcdeabcdefabcdefg&quot;,b[]&#x3D;&quot;abcdeabcdefab&quot;;</span><br><span class="line">    StrAssign  (s,a);</span><br><span class="line">    StrAssign  (t,b);</span><br><span class="line">    </span><br><span class="line">    cout&lt;&lt;BF(s,t)&lt;&lt;endl;&#x2F;&#x2F;输出结果</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;类型声明，自定义函数</span><br><span class="line">#define MaxSize 100</span><br><span class="line">typedef struct </span><br><span class="line">&#123;</span><br><span class="line">    char data[MaxSize ];</span><br><span class="line">    int length;</span><br><span class="line">&#125;SqString;&#x2F;&#x2F;此为非紧缩存储格式</span><br><span class="line"></span><br><span class="line">void StrAssign(SqString &amp;s,char cstr[])</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i&#x3D;0; i&lt;(int)strlen(cstr); i++)</span><br><span class="line">        s.data[i]&#x3D;cstr[i];</span><br><span class="line">    s.length&#x3D;i;</span><br><span class="line">&#125;&#x2F;&#x2F;字符串的生成</span><br></pre></td></tr></table></figure>
-<p>运行结果如下:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200402054623221-685514248.png"><br>上面结果是BF算法，KMP算法，改进的KMP合起来的，虽然运行出结果了，但是对其中KMP算法部分还不是很理解，所以就没贴上相关代码。</p>
-<hr>
-<h6 id="KMP算法的初步理解"><a href="#KMP算法的初步理解" class="headerlink" title="KMP算法的初步理解"></a>KMP算法的初步理解</h6><p>既然都是匹配字符串，第一步都是相同的，置$$i=0,j=0$$,对比BF算法，唯一的区别的地方就是在s[i]≠t[j]时(即匹配失败时)对i,j处理的不同</p>
-<blockquote>
-<p> <font color="red">此时，在t[j]字符前若找到k个字符使得<br>$t_0t_1…t_{k-1}=t_{j-k}t_{j-k+1}…t_{j-1}t_j$<br>即t[j]前有k个字符与t开头的k个字符相等，说明t[j]字符前已有k个字符被成功匹配,</font>下一趟应从t[k]开始匹配，即置j为k(next[j]=k)</p>
-</blockquote>
-<p>  初读这段话，感觉真的是云里雾里，难以理解，怎么就匹配成功了呢？沉思许久，终于找到一个合理的解释<br>将上面那段话翻译一下:<br>即**s[i]前有k个字符与t开头的k个字符相等，说明t开头的k个字符被成功匹配,**因为此时s[i]与t[j]前的字符是已经匹配好了的。</p>
-<hr>
-<h6 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h6><p>至此KMP算法的核心思想总算初步搞明白了，只是还有许多细节的地方感觉不是很懂，在算法实现的时候对求next数组部分感到难以理解，看来还是没有理解透彻，”革命尚未成功，同志仍需努力”呀</p>
-<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>这是笔者第一篇关于学习记录的博客，在写作过程遇到了许多问题，好在总算完成了，因为记忆力不好，希望以这种方式记录下自己的思考过程。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/" data-id="ckn4ilu3s0000ggkd688z3vyk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/" rel="tag">数据结构/算法</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-渗透测试之metasploit初试 (2)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/11/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" class="article-date">
-  <time datetime="2020-09-11T03:41:34.553Z" itemprop="datePublished">2020-09-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/11/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/">渗透测试之metasploit初试</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>本次测试只是按照《Metasploits渗透测试与开发实践指南》进行了一次过程复现，启发意义大于实际意义。</p>
-</blockquote>
-<h4 id="0x01-测试环境"><a href="#0x01-测试环境" class="headerlink" title="0x01 测试环境"></a>0x01 测试环境</h4><ul>
-<li>攻击者：VMware下的Kali Linux</li>
-<li>目标主机：VMware下的Windows XP SP2</li>
-</ul>
-<h4 id="0x02-渗透步骤"><a href="#0x02-渗透步骤" class="headerlink" title="0x02 渗透步骤"></a>0x02 渗透步骤</h4><ul>
-<li><h5 id="目标侦查："><a href="#目标侦查：" class="headerlink" title="目标侦查："></a>目标侦查：</h5><p>nmap -v -n 192.168.49.177 </p>
-</li>
-<li><h5 id="分析扫描结果："><a href="#分析扫描结果：" class="headerlink" title="分析扫描结果："></a>分析扫描结果：</h5><p>​    可以看到目标主机上开放了3个端口，以及运行在这些端口上的服务。</p>
-<p>​    其中135端口运行的是 msrpc(microsoft remote procedure call)。</p>
-</li>
-<li><h5 id="渗透："><a href="#渗透：" class="headerlink" title="渗透："></a>渗透：</h5><p>​    这里使用metasploit进行相关操作。</p>
-<ul>
-<li><p>首先打开终端，输入msfconsole启动metasploit </p>
-</li>
-<li><p>输入search dcom 可以查找所有和Windows RPC有关的exploit 。</p>
-<blockquote>
-<p>另外，可进入本地的漏洞数据库 cd /usr/share/expploitdb  使用searchsploit rpc 进行相关的查找。 </p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>执行exploit脚本</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/11/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" data-id="ckey334tu0000hwoj8qk71bfs" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/metasploit/" rel="tag">metasploit</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="test-2020-9-9" class="article article-type-test" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/09/2020-9-9/" class="article-date">
-  <time datetime="2020-09-09T04:55:48.000Z" itemprop="datePublished">2020-09-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/09/2020-9-9/">2020.9.9</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/09/2020-9-9/" data-id="ckey334u00001hwojga7u8okg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/09/hello-world/" class="article-date">
-  <time datetime="2020-09-09T03:44:51.025Z" itemprop="datePublished">2020-09-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/09/hello-world/" data-id="ckeuwtcir0000psoj37k89hn4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/metasploit/" rel="tag">metasploit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/" rel="tag">数据结构/算法</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/metasploit/" style="font-size: 10px;">metasploit</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构/算法</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/">(no title)</a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
           </li>
         
-          <li>
-            <a href="/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/">(no title)</a>
-          </li>
         
-          <li>
-            <a href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">实现顺序串的各种模式匹配算法</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/11/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/">渗透测试之metasploit初试</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/09/2020-9-9/">2020.9.9</a>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
-  
-</aside>
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="An elegant Material-Design theme for Hexo">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          
+目的：领会基本递归算法设计和递归到非递归的转换方法
+
+
+内容：编写一个程序exp5-1.cpp，采用递归和非递归方法求解Hanoi问题，输出三个盘片的移动过程
+写在前面题目是昨天老师发在学习通上的，目前
+
+解决了:
+
+Hanoi问题理解
+Hanoi递归算法及其实现
+
+未解决的:
+
+Hanoi非递归算法及实现(PPT上是用栈来实现的，然而笔者对栈不熟…解决完再记上来吧)
+以下就从解决了的两个方面展
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-06 12:49" pubdate>
+              2021-04-06
+            </time>
+          </div>
+        
+        
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    </article>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/06/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/">
+          
+          
+            
+          
+          写在前面  前段时间学习了插值法，虽然当时跟着老师的步骤，将公式推导了出来，但是也还有一些问题没有解决，为了防止遗忘，我把它们都记录在这里，主要分为两部分:
+
+1.知识结构梳理
+
+
+2.重要公式推导
+
+
+知识结构梳理概念的引入
+  当函数$f(x)$很复杂的时候，用一个简单易算的函数$p(x)$近似，其中$p(x)$是用一系列节点和节点处的函数值构造出来的:  一个区间范围插入$n+1$个点 $x
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-06 12:47" pubdate>
+              2021-04-06
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">实现顺序串的各种模式匹配算法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">
+          
+          
+            
+          
+          
+目的：掌握串的模式匹配算法（BF和KMP ）设计
+
+
+内容：编写一个程序exp4-3.cpp，实现顺序串的各种模式匹配运算，并在此基础上完成以下功能:1、建立目标串s=”abcabcdabcdeabcdefabcdefg”和模式串t=”abcdeabcdefab”；2、采用简单匹配算法求t在s中的位置；3、由模式串t求next数组值和nextval数组值；4、采用KMP算法求t在s中的位置；5、
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-05 19:19" pubdate>
+              2021-04-05
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/">数据结构/算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/11/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/">渗透测试之metasploit初试</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/11/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/">
+          
+          
+            
+          
+          
+本次测试只是按照《Metasploits渗透测试与开发实践指南》进行了一次过程复现，启发意义大于实际意义。
+
+0x01 测试环境
+攻击者：VMware下的Kali Linux
+目标主机：VMware下的Windows XP SP2
+
+0x02 渗透步骤
+目标侦查：nmap -v -n 192.168.49.177 
+
+分析扫描结果：​    可以看到目标主机上开放了3个端口，以及运行在这些端口上
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-11 11:41" pubdate>
+              2020-09-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/metasploit/">metasploit</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/09/2020-9-9/">2020.9.9</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/09/2020-9-9/">
+          
+          
+            
+          
+          
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-09 12:55" pubdate>
+              2020-09-09
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/09/hello-world/">Hello World</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/09/hello-world/">
+          
+          
+            
+          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-09 11:44" pubdate>
+              2020-09-09
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
   </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
 </body>
 </html>
