@@ -1,14 +1,10 @@
-extends includes/layout.pug
+extends ./_layout.pug
+include ./_mixins/timeline.pug
 
 block content
-  if theme.tag_ui == 'index'
-    include ./includes/mixins/post-ui.pug
-    #recent-posts.recent-posts
-      +postUI
-      include includes/pagination.pug
-  else
-    include ./includes/mixins/article-sort.pug
-    #tag
-      .article-sort-title= _p('page.tag') + ' - ' + page.tag
-      +articleSort(page.posts)
-      include includes/pagination.pug
+  div.tagpage
+    div.tagpage-title
+      span.tagpage-title__text= `${__('page.tags')} -- `
+      span.tagpage-title__name= page.tag
+
+    +timeline(page.posts.data)

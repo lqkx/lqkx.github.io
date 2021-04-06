@@ -1,14 +1,10 @@
-extends includes/layout.pug
+extends ./_layout.pug
+include ./_mixins/timeline.pug
 
 block content
-  if theme.category_ui == 'index'
-    include ./includes/mixins/post-ui.pug
-    #recent-posts.recent-posts.category_ui   
-      +postUI
-      include includes/pagination.pug    
-  else
-    include ./includes/mixins/article-sort.pug
-    #category
-      .article-sort-title= _p('page.category') + ' - ' + page.category
-      +articleSort(page.posts)
-      include includes/pagination.pug
+  div.categorypage
+    div.categorypage-title
+      span.categorypage-title__text= `${__('page.categories')} -- `
+      span.categorypage-title__name= page.category
+
+    +timeline(page.posts.data)

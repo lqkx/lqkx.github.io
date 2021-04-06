@@ -1,8 +1,9 @@
-extends includes/layout.pug
+extends ./_layout.pug
+include ./_mixins/timeline.pug
 
 block content
-  include ./includes/mixins/article-sort.pug
-  #archive
-    .article-sort-title= _p('page.articles') + ' - ' + site.posts.length
-    +articleSort(page.posts)
-    include includes/pagination.pug
+  div.archive
+    div.archive-total
+      = site.posts.length === 0 ? __('page.posts-empty') : _p('page.posts-total', site.posts.length)
+
+    +timeline(theme.post_list.paginate.archives ? page.posts.data : site.posts.data)
