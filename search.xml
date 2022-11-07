@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title>Github 静态博客搭建之绑定域名</title>
+      <link href="2022/11/07/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
+      <url>2022/11/07/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
+      
+        <content type="html"><![CDATA[<h4 id="Github-静态博客搭建之绑定域名"><a href="#Github-静态博客搭建之绑定域名" class="headerlink" title="Github 静态博客搭建之绑定域名"></a>Github 静态博客搭建之绑定域名</h4><h5 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h5><p>本人是在腾讯云买的，按照官网流程购买并实名认证即可，完成后的界面如下。</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107173328659.png" alt="image-20221107173328659"></p><h5 id="配置域名解析"><a href="#配置域名解析" class="headerlink" title="配置域名解析"></a>配置域名解析</h5><p>鼠标悬停至DNSPod,出现一个对话框，点击“管理解析”跳转至管理界面。</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107173835647.png" alt="image-20221107173835647"></p><p>管理界面如下，点击快速添加解析</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107174343943.png" alt="image-20221107174343943"></p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107175721238.png" alt="image-20221107175721238"></p><p>在这里，显然我们使用的是GitHub的服务器，那么只要ping一下Github生成的项目静态网址即可获取该服务器主机的ip地址，如下图所示。</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107180614432.png" alt="image-20221107180614432"></p><p>将IP地址填入，点击确定，可得两行记录</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107180902464.png" alt="image-20221107180902464"></p><p>现在在浏览器输入lqkx.club显然是不行的，因为还未设置域名映射。观察到如下说明</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107181039962.png" alt="image-20221107181039962"></p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107181434756.png" alt="image-20221107181434756"></p><p>注意A记录是将域名指向一个IPv4地址，上一步已经完成，而CNAME就是域名映射。所以只需要将第二行的域名记录改成CNAME,值设置为项目静态网址即可。如图</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107174343943.png" alt="image-20221107174343943"></p><h5 id="在博客项目目录的source文件夹下添加CNAME文件"><a href="#在博客项目目录的source文件夹下添加CNAME文件" class="headerlink" title="在博客项目目录的source文件夹下添加CNAME文件"></a>在博客项目目录的source文件夹下添加CNAME文件</h5><p>在source文件夹下新建一个CNAME文本，打开并输入个人域名（lqkx.club），保存</p><p>删除.txt后缀，保存。</p><h5 id="在Github绑定域名"><a href="#在Github绑定域名" class="headerlink" title="在Github绑定域名"></a>在Github绑定域名</h5><p>输入项目网址</p><p><img src="C:\Users\lqkx\AppData\Roaming\Typora\typora-user-images\image-20221107191848356.png" alt="image-20221107191848356"></p><p>点击“Settings”</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107192037545.png" alt="image-20221107192037545"></p><p>点击“Pages”</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107192314301.png" alt="image-20221107192314301"></p><p>下滑，在自定义域名这块输入自己的域名。可以选择强制https</p><p><img src="C:\Users\lqkx\AppData\Roaming\Typora\typora-user-images\image-20221107192431997.png" alt="image-20221107192431997"></p><p>绑定成功</p><p><img src="D:\lqkx\Pictures\work\FrontendDemo\image-20221107192749443.png" alt="image-20221107192749443"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo博客搭建 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="2021/06/16/Django%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/"/>
+      <url>2021/06/16/Django%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-环境安装"><a href="#1-环境安装" class="headerlink" title="1.环境安装"></a>1.环境安装</h4><blockquote><p>先把项目git clone 到本地磁盘</p></blockquote><h5 id="1-1-安装python环境"><a href="#1-1-安装python环境" class="headerlink" title="1.1 安装python环境"></a>1.1 安装python环境</h5><blockquote><p>环境要求在 requirements.txt 中  参照项目<a href="https://github.com/mdn/django-locallibrary-tutorial">https://github.com/mdn/django-locallibrary-tutorial</a> 的步骤</p></blockquote><blockquote><p>先安装python虚拟环境然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p><p>参考<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment">https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment</a> </p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install virtualenvwrapper-win</span><br></pre></td></tr></table></figure><blockquote><p>执行以下命令，注意以管理员身份运行终端</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br><span class="line">python manage.py collectstatic</span><br><span class="line">python manage.py test <span class="comment"># Run the standard tests. These should all pass.</span></span><br><span class="line">python manage.py createsuperuser <span class="comment"># Create a superuser</span></span><br><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure><p>但是执行 <code>python manage.py migrate</code>在 Windows 上失败并显示以下消息</p><blockquote><p><code>(fields.E180) SQLite does not support JSONFields.</code> </p></blockquote><p>解决参考：<a href="https://www.coder.work/article/7751912">https://www.coder.work/article/7751912</a></p><blockquote><p>将python下的dll文件进行替换</p></blockquote><h5 id="1-2-测试"><a href="#1-2-测试" class="headerlink" title="1.2 测试"></a>1.2 测试</h5><ul><li>Open a browser to <code>http://127.0.0.1:8000/admin/</code> to open the admin site</li><li>Create a few test objects of each type</li><li>Open tab to <code>http://127.0.0.1:8000</code> to see the main site, with your new objects</li></ul><p>但是打开主页面<code>http://127.0.0.1:8000</code>时出错<br><img src="https://img2020.cnblogs.com/blog/1412328/202112/1412328-20211214205055046-354526937.png"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>采用递归和非递归方法求解Hanoi问题</title>
       <link href="2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/"/>
       <url>2021/04/06/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/</url>
@@ -68,32 +100,6 @@
             <tag> metasploit </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="2020/09/23/hello-world/"/>
-      <url>2020/09/23/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2020.9.9</title>
-      <link href="2020/09/09/2020-9-9/"/>
-      <url>2020/09/09/2020-9-9/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
       
     </entry>
     
