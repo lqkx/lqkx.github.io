@@ -1,335 +1,625 @@
-<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>lqkx's blog - wwl9679@qq.com</title><meta name="author" content="lqkx"><meta name="copyright" content="lqkx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>lqkx&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="lqkx&#39;s blog">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="lqkx&#39;s blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/avator.jpg">
 <meta property="article:author" content="lqkx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/avator.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?d418ad2f5b5dc0d8bcd7e96281177bd4";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: 'Just',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2025-08-08 12:55:32'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+    <link rel="alternate" href="/atom.xml" title="lqkx&#39;s blog" type="application/atom+xml">
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          const now = new Date()
-          const hour = now.getHours()
-          const isNight = hour <= 6 || hour >= 18
-          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-          else if (t === 'light') activateLightMode()
-          else activateDarkMode()
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">lqkx&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    })(window)</script><meta name="generator" content="Hexo 5.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avator.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/homepage.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">lqkx's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">lqkx's blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" title="采用递归和非递归方法求解Hanoi问题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="采用递归和非递归方法求解Hanoi问题"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" title="采用递归和非递归方法求解Hanoi问题">采用递归和非递归方法求解Hanoi问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-18T10:03:18.169Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></span></div><div class="content">
-目的：领会基本递归算法设计和递归到非递归的转换方法
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-采用递归和非递归方法求解Hanoi问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2023-12-18T10:03:18.169Z" itemprop="datePublished">2023-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/">采用递归和非递归方法求解Hanoi问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>目的：领会基本递归算法设计和递归到非递归的转换方法</p>
+</blockquote>
+<blockquote>
+<p>内容：编写一个程序exp5-1.cpp，采用递归和非递归方法求解Hanoi问题，输出三个盘片的移动过程</p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>题目是昨天老师发在学习通上的，目前</p>
+</blockquote>
+<p>解决了:</p>
+<ol>
+<li>Hanoi问题理解</li>
+<li>Hanoi递归算法及其实现</li>
+</ol>
+<p>未解决的:</p>
+<ol start="3">
+<li>Hanoi非递归算法及实现<br>(PPT上是用栈来实现的，然而笔者对栈不熟…解决完再记上来吧)<blockquote>
+<p>以下就从解决了的两个方面展开讨论</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="Hanoi问题理解"><a href="#Hanoi问题理解" class="headerlink" title="Hanoi问题理解"></a>Hanoi问题理解</h5><p>笔者参考的是算法动态图解app上的解释，还挺直观的:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410110146630-1399934786.gif"></p>
+<p>简单来说就是有X，Y，Z三个柱子，目标是将X柱子上的盘片移动到Y柱子上，同时要保持和X柱相同的顺序。X柱子上盘片自下而上、由大到小放置着n个盘片，两个要求:</p>
+<p>Ⅰ. 一次只能移一个盘片</p>
+<p>Ⅱ.不能把大盘片放在小盘片上</p>
+<p>个人的理解:<br>首先，为了方便分析，将X柱上盘片自上而下依次编号为$1,2…n$</p>
+<ul>
+<li>当n=1时，即X柱上只有一个盘片，直接从X移动到Z，这是最简单的情况</li>
+<li>当n=2 时，<br>第一步，把1号移动到Y柱(因为要满足要求Ⅱ，2号盘片必须第一个移动到Z柱上，那么必须把1号先移开，移动到哪里？肯定不能是Z柱，那么就是Y柱了)<br>第二步，把2号盘移到Z柱<br>第三步，把1号从Y柱移动到Z柱，完成！</li>
+<li>当n=3时，<br> 第一步，可以把1号，2号盘，通过Z柱移到Y柱，这在前面(n=2时)已经证明可行。<br> 第二步，把3号盘移到Y柱<br> 第三步，发现问题转化为n=2的情况，即把1号，2号盘，从Y柱移动到Z柱，方法参见n=2，不再赘述</li>
+</ul>
+<p>写到这里，我们发现这个问题是可递归的，n个盘片的Hanoi问题可以通过n-1个盘片的Hanoi问题求得，抽象成数学语言就是$$f(n)=g(f(n-1)，c_{n-1},<br>,f(1)=m_1$$</p>
+<p>要求$f(n)$，可先求$f(n-1)，f(n-2)…$，层层递归，直到$f(1)$</p>
+<hr>
+<h5 id="Hanoi递归算法及其实现"><a href="#Hanoi递归算法及其实现" class="headerlink" title="Hanoi递归算法及其实现"></a>Hanoi递归算法及其实现</h5><h6 id="递归模型及递归算法"><a href="#递归模型及递归算法" class="headerlink" title="递归模型及递归算法"></a>递归模型及递归算法</h6><ul>
+<li><p>设计递归模型<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410113552631-1587432687.png"><br>可以看出递归模型分为递归体，递归出口两个部分，其实就是高中数学数列，递归函数概念</p>
+</li>
+<li><p>设计递归算法(以本题为例)<br>把盘片数，X柱，Y柱，Z柱分别抽象成自定义函数的四个参数n,X,Y,Z</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void Hanoi1(int n，char X，char Y，char Z)</span><br></pre></td></tr></table></figure>
+<p>分别用if语句，else语句描述递归出口与递归体</p>
+</li>
+<li><p>算法代码:</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归法</span><br><span class="line">void Hanoi1(int n,char X,char Y,char Z)&#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">        if(n&#x3D;&#x3D;1)&#123;</span><br><span class="line">        printf(&quot;\t将第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;递归出口，当只有一个盘片时     &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">        Hanoi1 (n-1,X,Z,Y);&#x2F;&#x2F;将n-1个盘片，通过z,从x移动到y</span><br><span class="line">        printf (&quot;\t把第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;将第n个盘片，从x移动到z</span><br><span class="line">        Hanoi1 (n-1,Y,X,Z);&#x2F;&#x2F;将n-1个盘片，通过x,从y移动到z</span><br><span class="line">        </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="Hanoi递归算法的实现"><a href="#Hanoi递归算法的实现" class="headerlink" title="Hanoi递归算法的实现"></a>Hanoi递归算法的实现</h6><p>理解了算法代码的实现，接下来就就是”搬砖”阶段了</p>
+<blockquote>
+<p>在main()函数里分别初始化三个参数的值，然后调用Hanoi1()就可以了</p>
+</blockquote>
+<p>完整代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归法</span><br><span class="line">void Hanoi1(int n,char X,char Y,char Z)&#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">        if(n&#x3D;&#x3D;1)&#123;</span><br><span class="line">        printf(&quot;\t将第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;递归出口，当只有一个盘片时</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Hanoi1 (n-1,X,Z,Y);&#x2F;&#x2F;将n-1个盘片，通过z,从x移动到y</span><br><span class="line">        printf (&quot;\t把第%d个盘片从%c移动到%c\n&quot;,n,X,Z);&#x2F;&#x2F;将第n个盘片，从x移动到z</span><br><span class="line">        Hanoi1 (n-1,Y,X,Z);&#x2F;&#x2F;将n-1个盘片，通过x,从y移动到z</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int n&#x3D;3;</span><br><span class="line">    char X&#x3D;&#39;x&#39;,Y&#x3D;&#39;y&#39;,Z&#x3D;&#39;z&#39;;</span><br><span class="line">    cout &lt;&lt;&quot;递归法过程:&quot;&lt;&lt;endl;</span><br><span class="line">    Hanoi1 (n,X,Y,Z);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>运行截图:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200410110306245-1704506698.png"></p>
+<hr>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>  在”搬砖”的过程中，出现了许多错误，变量未初始化(uninitialzing)，函数未指名(not declared)  …原因在于没有经历完整的c语言编程过程，只是看教材的代码，效率确实太低了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" data-id="cme2ls0ut0008akqffilp2bmi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
 
-内容：编写一个程序exp5-1.cpp，采用递归和非递归方法求解Hanoi问题，输出三个盘片的移动过程
-写在前面题目是昨天老师发在学习通上的，目前
+  
+    <article id="post-渗透测试之metasploit初试 (2)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" class="article-date">
+  <time datetime="2023-12-18T10:03:18.153Z" itemprop="datePublished">2023-12-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a>
+  </div>
 
-解决了:
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/">渗透测试之metasploit初试</a>
+    </h1>
+  
 
-Hanoi问题理解
-Hanoi递归算法及其实现
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本次测试只是按照《Metasploits渗透测试与开发实践指南》进行了一次过程复现，启发意义大于实际意义。</p>
+</blockquote>
+<h4 id="0x01-测试环境"><a href="#0x01-测试环境" class="headerlink" title="0x01 测试环境"></a>0x01 测试环境</h4><ul>
+<li>攻击者：VMware下的Kali Linux</li>
+<li>目标主机：VMware下的Windows XP SP2</li>
+</ul>
+<h4 id="0x02-渗透步骤"><a href="#0x02-渗透步骤" class="headerlink" title="0x02 渗透步骤"></a>0x02 渗透步骤</h4><ul>
+<li><h5 id="目标侦查："><a href="#目标侦查：" class="headerlink" title="目标侦查："></a>目标侦查：</h5><p>nmap -v -n 192.168.49.177 </p>
+</li>
+<li><h5 id="分析扫描结果："><a href="#分析扫描结果：" class="headerlink" title="分析扫描结果："></a>分析扫描结果：</h5><p>​    可以看到目标主机上开放了3个端口，以及运行在这些端口上的服务。</p>
+<p>​    其中135端口运行的是 msrpc(microsoft remote procedure call)。</p>
+</li>
+<li><h5 id="渗透："><a href="#渗透：" class="headerlink" title="渗透："></a>渗透：</h5><p>​    这里使用metasploit进行相关操作。</p>
+<ul>
+<li><p>首先打开终端，输入msfconsole启动metasploit </p>
+</li>
+<li><p>输入search dcom 可以查找所有和Windows RPC有关的exploit 。</p>
+<blockquote>
+<p>另外，可进入本地的漏洞数据库 cd /usr/share/expploitdb  使用searchsploit rpc 进行相关的查找。 </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>执行exploit脚本</li>
+</ul>
+</li>
+</ul>
 
-未解决的:
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" data-id="cme2ls0us0007akqf1wayg2mb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/metasploit/" rel="tag">metasploit</a></li></ul>
 
-Hanoi非递归算法及实现(PPT上是用栈来实现的，然而笔者对栈不熟…解决完再记上来吧)
-以下就从解决了的两个方面展开讨论
-
-
-
-Hanoi问题理解笔者参考的是算法动态图解app上的解释，还挺直观的:
-简单来说就是有X，Y，Z三个柱子，目标是将X柱子上的盘片移动到Y柱子上，同时要保持和X柱相同的顺序。X柱子上盘片自下而上、由大到小放置着n个盘片，两个要求:
-Ⅰ. 一次只能移一个盘片
-Ⅱ.不能把大盘片放在小盘片上
-个人的理解:首先，为了方便分析，将X柱上盘片自上而下依次编号为$1,2…n$
-
-当n=1时，即X柱上只有一个盘片，直接从X移动到Z，这是最简单的情况
-当n=2 时，第一步，把1号移动到Y柱(因为要满足要求Ⅱ，2号盘片必须第一个移动到Z柱上，那么必须把1号先移开，移动到哪里？肯定不能是Z柱，那么就是Y ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" title="渗透测试之metasploit初试">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="渗透测试之metasploit初试"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" title="渗透测试之metasploit初试">渗透测试之metasploit初试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-18T10:03:18.153Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></span></div><div class="content">
-本次测试只是按照《Metasploits渗透测试与开发实践指南》进行了一次过程复现，启发意义大于实际意义。
-
-0x01 测试环境
-攻击者：VMware下的Kali Linux
-目标主机：VMware下的Windows XP SP2
-
-0x02 渗透步骤
-目标侦查：nmap -v -n 192.168.49.177 
-
-分析扫描结果：​    可以看到目标主机上开放了3个端口，以及运行在这些端口上的服务。
-​    其中135端口运行的是 msrpc(microsoft remote procedure call)。
-
-渗透：​    这里使用metasploit进行相关操作。
-
-首先打开终端，输入msfconsole启动metasploit 
-
-输入search dcom 可以查找所有和Windows RPC有关的exploit 。
-
-另外，可进入本地的漏洞数据库 cd /usr/share/expploitdb  使用searchsploit rpc 进行相关的查找。 
-
-
-
-
-执行exploit脚本
-
-
-
-</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" title="插值法总结">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="插值法总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" title="插值法总结">插值法总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-18T10:03:18.090Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></span></div><div class="content">写在前面  前段时间学习了插值法，虽然当时跟着老师的步骤，将公式推导了出来，但是也还有一些问题没有解决，为了防止遗忘，我把它们都记录在这里，主要分为两部分:
-
-1.知识结构梳理
-
-
-2.重要公式推导
-
-
-知识结构梳理概念的引入
-  当函数$f(x)$很复杂的时候，用一个简单易算的函数$p(x)$近似，其中$p(x)$是用一系列节点和节点处的函数值构造出来的:  一个区间范围插入$n+1$个点 $x_0,x_1…x_n$得到$n+1$个函数值$f(x_i)(i=0,1…n)$如果$p(x)$满足:$p(x_i)=f(x_i)(i=0,1..n),$则称$p(x)$为$f(x)$的$n$次插值函数,求$p(x)$的方法称为插值法$p(x)$常为多项式
-几个重要的插值法拉格朗日插值
- 从一次插值开始，到二次插值，再推广至n次
-
-均差与牛顿插值样条插值
-公式推导拉格朗日插值:基函数法
-一次插值: 两个插值节点:$(x_0,y_0),(x_1,y_1)$用点斜式$l(x)=y_0+\frac{y_1-y_0}{x_1-x_0}(x-x_0)$整理一下得到
-
-$l(x)=y_0\frac{x-x_ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2023/12/18/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" title="Github 静态博客搭建之绑定域名">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github 静态博客搭建之绑定域名"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/18/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" title="Github 静态博客搭建之绑定域名">Github 静态博客搭建之绑定域名</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-18T10:03:18.075Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a></span></div><div class="content">购买域名本人是在腾讯云买的，按照官网流程购买并实名认证即可，完成后的界面如下。
-
-配置域名解析鼠标悬停至DNSPod,出现一个对话框，点击“管理解析”跳转至管理界面。
-
-管理界面如下，点击快速添加解析
+    </footer>
+  </div>
+  
+</article>
 
 
-在这里，显然我们使用的是GitHub的服务器，那么只要ping一下Github生成的项目静态网址即可获取该服务器主机的ip地址，如下图所示。
+  
+    <article id="post-数值分析之插值法总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2023-12-18T10:03:18.090Z" itemprop="datePublished">2023-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/">插值法总结</a>
+    </h1>
+  
 
-将IP地址填入，点击确定，可得两行记录
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>  前段时间学习了插值法，虽然当时跟着老师的步骤，将公式推导了出来，但是也还有一些问题没有解决，为了防止遗忘，我把它们都记录在这里，主要分为两部分:</p>
+<blockquote>
+<p>1.知识结构梳理</p>
+</blockquote>
+<blockquote>
+<p>2.重要公式推导</p>
+</blockquote>
+<hr>
+<h4 id="知识结构梳理"><a href="#知识结构梳理" class="headerlink" title="知识结构梳理"></a>知识结构梳理</h4><h5 id="概念的引入"><a href="#概念的引入" class="headerlink" title="概念的引入"></a><strong>概念的引入</strong></h5><p><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200403020651666-1125867375.jpg"></p>
+<p>  当函数$f(x)$很复杂的时候，用一个简单易算的函数$p(x)$近似，其中$p(x)$是用一系列节点和节点处的函数值构造出来的:<br>  一个区间范围插入$n+1$个点 $x_0,x_1…x_n$得到$n+1$个函数值$f(x_i)(i=0,1…n)$<br>如果$p(x)$满足:$p(x_i)=f(x_i)(i=0,1..n),$则称$p(x)$为$f(x)$的$n$次插值函数,求$p(x)$的方法称为插值法<br>$p(x)$常为多项式</p>
+<h5 id="几个重要的插值法"><a href="#几个重要的插值法" class="headerlink" title="几个重要的插值法"></a><strong>几个重要的插值法</strong></h5><h6 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h6><blockquote>
+<p> <em>从一次插值开始，到二次插值，再推广至n次</em></p>
+</blockquote>
+<h6 id="均差与牛顿插值"><a href="#均差与牛顿插值" class="headerlink" title="均差与牛顿插值"></a>均差与牛顿插值</h6><h6 id="样条插值"><a href="#样条插值" class="headerlink" title="样条插值"></a>样条插值</h6><hr>
+<h4 id="公式推导"><a href="#公式推导" class="headerlink" title="公式推导"></a>公式推导</h4><h5 id="拉格朗日插值-基函数法"><a href="#拉格朗日插值-基函数法" class="headerlink" title="拉格朗日插值:基函数法"></a>拉格朗日插值:基函数法</h5><ol>
+<li><p>一次插值:<br> 两个插值节点:$(x_0,y_0),(x_1,y_1)$用点斜式$l(x)=y_0+\frac{y_1-y_0}{x_1-x_0}(x-x_0)$<br>整理一下得到</p>
+<blockquote>
+<p>$l(x)=y_0\frac{x-x_1}{x_0-x_1}+y_1\frac{x-x_0}{x_1-x_0}$<br>令$l_0=\frac{x-x_1}{x_0-x_1}\quad         l_1=\frac{x-x_0}{x_1-x_0}$</p>
+</blockquote>
+<p>将公式进一步简化:</p>
+<blockquote>
+<p>$$l_1(x)= \sum_{i=0}^{1} {l_iy_i}$$<br>其中$l_i$就是所谓的基函数。<br>2.二次插值:和一次相同的方法得到<br>$$l_2(x)= \sum_{i=0}^{2} {l_iy_i}$$</p>
+</blockquote>
+<p>对于其中基函数$l_i$的求法一开始反应不过来，看了PPT才恍然大悟  因为对于插值函数<br>肯定要满足:<br><font color="red">$l_2(x_j)=y_j (j=0,1,2)$</font><br>将$y_j$的三个值分别代入，显然可以得到:</p>
+<blockquote>
+<p>$l_2(x_0)=y_0$<br>$l_2(x_1)=y_1$<br>$l_2(x_2)=y_2$</p>
+</blockquote>
+<p>可以看出在插值函数表达式中，只有和x下标相同的那项被保留了下来。由此可推出:</p>
+<blockquote>
+<p>$l_0(x_0)=1, l_0(x_1)=0, l_0(x_2)=0$<br>$l_1(x_0)=0, l_1(x_1)=1, l_1(x_2)=0$<br>$l_2(x_0)=0, l_2(x_1)=0, l_2(x_2)=1$</p>
+</blockquote>
+<p>满足上面这些条件，求基函数显然变简单了，例如求$l_0$可设$$l_0(x)=A_0(x-x_1)(x-x_2)$$将$x_0$代入这个式子，可以求出</p>
+<blockquote>
+<p>$A_0=\frac{1}{(x_0-x_1)(x_0-x_2)}$</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>$l_0(x)=\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}$</p>
+</blockquote>
+<p>  同理可以求得$l_1(x)，l_2(x)$<br>3.n次插值<br>这一部分已经不大记得清了，当时推导也花了近一节课，最终公式如下:<br>$$l_n(x)=y_0l_0+y_1l_1+…y_nl_n=\sum_{i=0}^{n} {l_iy_i}$$<br>其中:<br>$$<br>l_i=\frac{\overbrace{(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_{i+1})…(x-x_n)}^{n个项}}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x-x_{i+1})…(x-x_n)}\<br>    =\prod_{j≠i,j=0}^{n} \frac{(x-x_j)}{(x_i-x_j)}<br>$$</p>
+<p>注意此公式的分子<font color="red">不含$(x-x_i)$项</font></p>
+<p><del>推导过程就不写了，也记不得了，回头再加上…..</del></p>
+<hr>
+<p>2020.4.2更新  :<br>今天翻笔记本，发现了之前的推导笔记，喜出望外——不用再重新推导一遍了，特来更新一波~<br>  对于n次插值基函数$l_i$的表达式，其实可以从一次，二次表达式中归纳出来，相信读者是和我一样想的，但是为了保持严谨，还是一步一步推导吧！<br>先补充说明一下，这里$l_i(x_j)$有个专门的叫法:拉氏基函数，满足条件:<br>$$l_i(x_j)=\delta_{ij}= \begin{cases}0&amp;&amp;j≠i\ \ 1 &amp;&amp;j=i\end{cases}$$<br>显然每个$l_i$都有$不含x_i的n$个根:<br>$$x_0,x_1…x_{i-1},x_i…x_{n-1},x_n$$<br>可设<br>$$l_i(x)=A_i(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_i)…(x-x{n-1})(x-x_n)$$<br>$$=\prod_{j≠i,j=0}^{n}A_i(x-x_j)$$<br>由$l_i(x_i)=1$，得$$A_i=\frac{1}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>代入上面$l_i$的公式得:<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)},满足l_i(x_j)=\delta_{ij}$$<br>现在已经推导出$l_i$的表达式了，把它代入插值函数<br>$$L_n(x)=\sum_{i=0}^{n}l_i(x)y_i即可得到<br>L_n(x)=\sum_{i=0}^{n}[\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}y_i]$$<br>引入一个记号<br>$$\omega_{n+1}(x)=(x-x_0)(x-x_1)…(x-x_n)$$<br><del>不含(x-x_i)项，这里容易误解，明明是n个点，为什么$\omega$的下标是n+1?也许两者之间并无关联吧，</del><br>emmm…是笔者理解错误，后面求导时发现的,额…继续往下做，话说当老师讲到引入这个记号时，笔者心想大概就是要将$L_n(x)$的表达式转换成含$\omega_{n+1}(x)$的形式了，只是不知道有什么用…继续继续，第一步是对<br>$\omega_{n+1}(x)$求一阶导，根据求导的定义，分别对这n+1项求导，有:<br>$$\omega’<em>{n+1}(x)=(x-x_0)’(x-x_1)…(x-x_n)+(x-x_0)(x-x_1)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_i)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x_n)’$$<br>显然$\omega’<em>{n+1}(x)$的这个式子有$n+1$项<br>好了，第二步:将$x=x_i$代入上式，<font color="red">所有含$(x-x_i)$的项都化为0</font><br>原式化为:<br>$$\omega’</em>{n+1}(x_i)=(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_n)$$<br>可以看出只有对$(x-x_i)$一项求导的留了下来。<br>从而推出<br>$$\omega’<em>{n+1}(x)=(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_{i+1})…(x-x_n)$$<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>$$=\frac{\omega_{n+1}(x)}{(x-x_i) \omega’_{n+1}(x)}$$</p>
+<hr>
+<p>最终n次插值函数$L_n(x)$的表达式为:<br>$$L_n(x)=\sum_{i=0}^{n}y_i \frac{\omega_{n+1}(x)}{(x-x_i)\omega’_{n+1}(x)}$$<br>推导完成!</p>
+<hr>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>  这篇文章花费了远超预计的时间，主要是用手机打latex公式太慢了，另外还有排板，好在总算完成了，数值分析有点复杂，但是只要努力就一定能学好，加油～</p>
 
-现在在浏览器输入lqkx.club显然是不行的，因为还未设置域名映射。观察到如下说明
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" data-id="cme2ls0uq0005akqfae4rc74y" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
 
-注意A记录是将域名指向一个IPv4地址，上一步已经完成，而CNAME就是域名映射。所以只需要将第二行的域名记录改成CNAME,值设置为项目静态网址即可。如图
+  
+    <article id="post-Github 静态博客搭建之绑定域名" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/18/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" class="article-date">
+  <time datetime="2023-12-18T10:03:18.075Z" itemprop="datePublished">2023-12-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a>
+  </div>
 
-在博客项目目录的source文件夹下添加CNAME文件在source文件夹下新建一个CNAME文本，打开并输入个人域名（lqkx.club），保存
-删除.txt后缀，保存。
-在Github绑定域名输入项目网址
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/18/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/">Github 静态博客搭建之绑定域名</a>
+    </h1>
+  
 
-点击“Settings”
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h5><p>本人是在腾讯云买的，按照官网流程购买并实名认证即可，完成后的界面如下。</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130538490-466759769.png"></p>
+<h5 id="配置域名解析"><a href="#配置域名解析" class="headerlink" title="配置域名解析"></a>配置域名解析</h5><p>鼠标悬停至DNSPod,出现一个对话框，点击“管理解析”跳转至管理界面。</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130851732-522361276.png"></p>
+<p>管理界面如下，点击快速添加解析</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130653802-2051231002.png"></p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130743968-1628099239.png"></p>
+<p>在这里，显然我们使用的是GitHub的服务器，那么只要ping一下Github生成的项目静态网址即可获取该服务器主机的ip地址，如下图所示。</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130921457-1778302773.png"></p>
+<p>将IP地址填入，点击确定，可得两行记录</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130938049-1899746064.png"></p>
+<p>现在在浏览器输入lqkx.club显然是不行的，因为还未设置域名映射。观察到如下说明</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130953497-48667923.png"></p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108131005305-1865950883.png"></p>
+<p>注意A记录是将域名指向一个IPv4地址，上一步已经完成，而CNAME就是域名映射。所以只需要将第二行的域名记录改成CNAME,值设置为项目静态网址即可。如图</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108131021676-420854113.png"></p>
+<h5 id="在博客项目目录的source文件夹下添加CNAME文件"><a href="#在博客项目目录的source文件夹下添加CNAME文件" class="headerlink" title="在博客项目目录的source文件夹下添加CNAME文件"></a>在博客项目目录的source文件夹下添加CNAME文件</h5><p>在source文件夹下新建一个CNAME文本，打开并输入个人域名（lqkx.club），保存</p>
+<p>删除.txt后缀，保存。</p>
+<h5 id="在Github绑定域名"><a href="#在Github绑定域名" class="headerlink" title="在Github绑定域名"></a>在Github绑定域名</h5><p>输入项目网址</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108130203281-1277871140.png"></p>
+<p>点击“Settings”</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108131105109-47420582.png"></p>
+<p>点击“Pages”</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108131116396-1569671318.png"></p>
+<p>下滑，在自定义域名这块输入自己的域名。可以选择强制https</p>
+<p><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108131220266-1980534305.png"></p>
+<p>绑定成功<br><img src="https://img2022.cnblogs.com/blog/1412328/202211/1412328-20221108131338042-516734147.png"></p>
 
-点击“Pages”
-
-下滑，在自定义域名这块输入自己的域名。可以选择强制https
-
-绑定成功
-</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/12/18/Django%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/" title="No title">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/18/Django%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-18T10:03:18.059Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></span></div><div class="content">1.环境安装
-先把项目git clone 到本地磁盘
-
-1.1 安装python环境
-环境要求在 requirements.txt 中  参照项目https://github.com/mdn/django-locallibrary-tutorial 的步骤
-
-
-先安装python虚拟环境然后你就可以使用 mkvirtualenv命令创建一个新的虚拟环境。
-参考https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment 
-
-1pip3 install virtualenvwrapper-win
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/18/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" data-id="cme2ls0ue0001akqfecvpa8hy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
 
-执行以下命令，注意以管理员身份运行终端
+  
+    <article id="post-Django项目配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/18/Django%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2023-12-18T10:03:18.059Z" itemprop="datePublished">2023-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-环境安装"><a href="#1-环境安装" class="headerlink" title="1.环境安装"></a>1.环境安装</h4><blockquote>
+<p>先把项目git clone 到本地磁盘</p>
+</blockquote>
+<h5 id="1-1-安装python环境"><a href="#1-1-安装python环境" class="headerlink" title="1.1 安装python环境"></a>1.1 安装python环境</h5><blockquote>
+<p>环境要求在 requirements.txt 中  参照项目<a target="_blank" rel="noopener" href="https://github.com/mdn/django-locallibrary-tutorial">https://github.com/mdn/django-locallibrary-tutorial</a> 的步骤</p>
+</blockquote>
+<blockquote>
+<p>先安装python虚拟环境然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p>
+<p>参考<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment">https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment</a> </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install virtualenvwrapper-win</span><br></pre></td></tr></table></figure>
 
-1234567pip install -r requirements.txtpython manage.py makemigrationspython manage.py migratepython manage.py collectstaticpython manage.py test # Run the standard test ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/" title="实现顺序串的各种模式匹配算法">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实现顺序串的各种模式匹配算法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/" title="实现顺序串的各种模式匹配算法">实现顺序串的各种模式匹配算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-05T11:19:14.000Z" title="Created 2021-04-05 19:19:14">2021-04-05</time></span></div><div class="content">
-目的：掌握串的模式匹配算法（BF和KMP ）设计
+<blockquote>
+<p>执行以下命令，注意以管理员身份运行终端</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br><span class="line">python manage.py collectstatic</span><br><span class="line">python manage.py test <span class="comment"># Run the standard tests. These should all pass.</span></span><br><span class="line">python manage.py createsuperuser <span class="comment"># Create a superuser</span></span><br><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure>
+
+<p>但是执行 <code>python manage.py migrate</code>在 Windows 上失败并显示以下消息</p>
+<blockquote>
+<p><code>(fields.E180) SQLite does not support JSONFields.</code> </p>
+</blockquote>
+<p>解决参考：<a target="_blank" rel="noopener" href="https://www.coder.work/article/7751912">https://www.coder.work/article/7751912</a></p>
+<blockquote>
+<p>将python下的dll文件进行替换</p>
+</blockquote>
+<h5 id="1-2-测试"><a href="#1-2-测试" class="headerlink" title="1.2 测试"></a>1.2 测试</h5><ul>
+<li>Open a browser to <code>http://127.0.0.1:8000/admin/</code> to open the admin site</li>
+<li>Create a few test objects of each type</li>
+<li>Open tab to <code>http://127.0.0.1:8000</code> to see the main site, with your new objects</li>
+</ul>
+<p>但是打开主页面<code>http://127.0.0.1:8000</code>时出错<br><img src="https://img2020.cnblogs.com/blog/1412328/202112/1412328-20211214205055046-354526937.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/18/Django%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/" data-id="cme2ls0tz0000akqf0v2c0pig" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
 
-内容：编写一个程序exp4-3.cpp，实现顺序串的各种模式匹配运算，并在此基础上完成以下功能:1、建立目标串s=”abcabcdabcdeabcdefabcdefg”和模式串t=”abcdeabcdefab”；2、采用简单匹配算法求t在s中的位置；3、由模式串t求next数组值和nextval数组值；4、采用KMP算法求t在s中的位置；5、采用改进的KMP算法求t在s中的位置；
+  
+    <article id="post-实现顺序串的各种模式匹配算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/" class="article-date">
+  <time datetime="2021-04-05T11:19:14.000Z" itemprop="datePublished">2021-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">实现顺序串的各种模式匹配算法</a>
+    </h1>
+  
 
-写在前面  今天学习了如何对顺序串相关的算法，主要是看老师的PPT，问题主要分两方面:
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>目的：掌握串的模式匹配算法（BF和KMP ）设计</p>
+</blockquote>
+<blockquote>
+<p>内容：编写一个程序exp4-3.cpp，实现顺序串的各种模式匹配运算，并在此基础上完成以下功能:<br>1、建立目标串s=”abcabcdabcdeabcdefabcdefg”和模式串t=”abcdeabcdefab”；<br>2、采用简单匹配算法求t在s中的位置；<br>3、由模式串t求next数组值和nextval数组值；<br>4、采用KMP算法求t在s中的位置；<br>5、采用改进的KMP算法求t在s中的位置；</p>
+</blockquote>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>  今天学习了如何对顺序串相关的算法，主要是看老师的PPT，问题主要分两方面:</p>
+<ol>
+<li><strong>算法的理解</strong></li>
+<li><strong>算法的实现</strong><br>以下主要就从这两个方面进行讨论</li>
+</ol>
+<hr>
+<h5 id="算法的理解"><a href="#算法的理解" class="headerlink" title="算法的理解"></a>算法的理解</h5><p>   这道题目主要涉及的算法有BF，KMP。这两个算法都是用来判定模式串t是否为目标串s的子串问题，其中BF算法感觉还挺简单的，就是<font color="red">从s的每一个字符开始依次与t的字符进行匹配</font><br>匹配过程如下:</p>
+<ol>
+<li>$$S: \color{red}a\quad a\quad a\quad a\quad a\quad b$$<br>$$ T:\color{red}a\quad a\quad a\quad b$$<br>此时i=0,y=0  s[0]=t[0]<br>i,j继续后移,即i++, j++,直到出现s[i]≠t[j]</li>
+<li>$$S: a\quad a\quad a\quad \color{red}a\quad a\quad b$$<br>$$ T:a\quad a\quad a\quad \color{red}b$$<br>此时i=3,y=3 s[3]≠t[3] 匹配失败<br><font color="red"> i回退，j重置为0(i=i-j+1,j=0)</font><br>循环执行1,2步</li>
+<li>$$S: a\quad a\quad a\quad a\quad a\quad \color{red}b$$<br>$$ T:a\quad a\quad a\quad \color{red}b$$<br>此时i=6,y=4 s[6]=t[4] 匹配成功!</li>
+</ol>
+<hr>
+<p>总的说来，BF算法的关键在于匹配失败时对i,j的处理。</p>
+<h5 id="算法的实现"><a href="#算法的实现" class="headerlink" title="算法的实现"></a>算法的实现</h5> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;BF算法</span><br><span class="line">int BF(SqString s,SqString t)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;0,j&#x3D;0;</span><br><span class="line">    while (i&lt;s.length &amp;&amp; j&lt;t.length )</span><br><span class="line">    &#123;</span><br><span class="line">        if(s.data[i]&#x3D;&#x3D;t.data[j] )</span><br><span class="line">        &#123;</span><br><span class="line">            i++;</span><br><span class="line">            j++;&#x2F;&#x2F;继续匹配下一个字符，依次匹配</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            i&#x3D;i-j+1;&#x2F;&#x2F;主串的指针回溯</span><br><span class="line">            j&#x3D;0;</span><br><span class="line">        </span><br><span class="line">        &#125;&#x2F;&#x2F;进行下一次匹配</span><br><span class="line">    &#125;</span><br><span class="line">          </span><br><span class="line">    if(j&gt;&#x3D;t.length )</span><br><span class="line">       </span><br><span class="line">    return (i-t.length );&#x2F;&#x2F;返回匹配的第一个位置的下标，因为是依次进行匹配，所以最终i的值会有包含字串t的长度。</span><br><span class="line">    else return (-1);</span><br><span class="line">       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  在阅读这段代码的时候while语句里的循环条件:<code>while (i&lt;s.length &amp;&amp; j&lt;t.length )</code>不是很好理解，后来仔细检查发现i,j都是从0开始，那么它们代表的是字符串中字符位置的下标，取<br>0–(length-1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;主函数</span><br><span class="line">int main() &#123;</span><br><span class="line">    SqString s,t;</span><br><span class="line">    </span><br><span class="line">    char a[]&#x3D;&quot;abcabcdabcdeabcdefabcdefg&quot;,b[]&#x3D;&quot;abcdeabcdefab&quot;;</span><br><span class="line">    StrAssign  (s,a);</span><br><span class="line">    StrAssign  (t,b);</span><br><span class="line">    </span><br><span class="line">    cout&lt;&lt;BF(s,t)&lt;&lt;endl;&#x2F;&#x2F;输出结果</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;类型声明，自定义函数</span><br><span class="line">#define MaxSize 100</span><br><span class="line">typedef struct </span><br><span class="line">&#123;</span><br><span class="line">    char data[MaxSize ];</span><br><span class="line">    int length;</span><br><span class="line">&#125;SqString;&#x2F;&#x2F;此为非紧缩存储格式</span><br><span class="line"></span><br><span class="line">void StrAssign(SqString &amp;s,char cstr[])</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i&#x3D;0; i&lt;(int)strlen(cstr); i++)</span><br><span class="line">        s.data[i]&#x3D;cstr[i];</span><br><span class="line">    s.length&#x3D;i;</span><br><span class="line">&#125;&#x2F;&#x2F;字符串的生成</span><br></pre></td></tr></table></figure>
+<p>运行结果如下:<br><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200402054623221-685514248.png"><br>上面结果是BF算法，KMP算法，改进的KMP合起来的，虽然运行出结果了，但是对其中KMP算法部分还不是很理解，所以就没贴上相关代码。</p>
+<hr>
+<h6 id="KMP算法的初步理解"><a href="#KMP算法的初步理解" class="headerlink" title="KMP算法的初步理解"></a>KMP算法的初步理解</h6><p>既然都是匹配字符串，第一步都是相同的，置$$i=0,j=0$$,对比BF算法，唯一的区别的地方就是在s[i]≠t[j]时(即匹配失败时)对i,j处理的不同</p>
+<blockquote>
+<p> <font color="red">此时，在t[j]字符前若找到k个字符使得<br>$t_0t_1…t_{k-1}=t_{j-k}t_{j-k+1}…t_{j-1}t_j$<br>即t[j]前有k个字符与t开头的k个字符相等，说明t[j]字符前已有k个字符被成功匹配,</font>下一趟应从t[k]开始匹配，即置j为k(next[j]=k)</p>
+</blockquote>
+<p>  初读这段话，感觉真的是云里雾里，难以理解，怎么就匹配成功了呢？沉思许久，终于找到一个合理的解释<br>将上面那段话翻译一下:<br>即**s[i]前有k个字符与t开头的k个字符相等，说明t开头的k个字符被成功匹配,**因为此时s[i]与t[j]前的字符是已经匹配好了的。</p>
+<hr>
+<h6 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h6><p>至此KMP算法的核心思想总算初步搞明白了，只是还有许多细节的地方感觉不是很懂，在算法实现的时候对求next数组部分感到难以理解，看来还是没有理解透彻，”革命尚未成功，同志仍需努力”呀</p>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>这是笔者第一篇关于学习记录的博客，在写作过程遇到了许多问题，好在总算完成了，因为记忆力不好，希望以这种方式记录下自己的思考过程。</p>
 
-算法的理解
-算法的实现以下主要就从这两个方面进行讨论
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/05/%E5%AE%9E%E7%8E%B0%E9%A1%BA%E5%BA%8F%E4%B8%B2%E7%9A%84%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/" data-id="cme2ls0uo0004akqfgr3x25lw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/" rel="tag">数据结构/算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
 
 
-算法的理解   这道题目主要涉及的算法有BF，KMP。这两个算法都是用来判定模式串t是否为目标串s的子串问题，其中BF算法感觉还挺简单的，就是从s的每一个字符开始依次与t的字符进行匹配匹配过程如下:
+  
 
-$$S: \color{red}a\quad a\quad a\quad a\quad a\quad b$$$$ T:\color{red}a\quad a\quad a\quad b$$此时i=0,y=0  ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avator.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">lqkx</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lqkx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog , welcome !</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" title="采用递归和非递归方法求解Hanoi问题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="采用递归和非递归方法求解Hanoi问题"/></a><div class="content"><a class="title" href="/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/" title="采用递归和非递归方法求解Hanoi问题">采用递归和非递归方法求解Hanoi问题</a><time datetime="2023-12-18T10:03:18.169Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" title="渗透测试之metasploit初试"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="渗透测试之metasploit初试"/></a><div class="content"><a class="title" href="/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/" title="渗透测试之metasploit初试">渗透测试之metasploit初试</a><time datetime="2023-12-18T10:03:18.153Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" title="插值法总结"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="插值法总结"/></a><div class="content"><a class="title" href="/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" title="插值法总结">插值法总结</a><time datetime="2023-12-18T10:03:18.090Z" title="Created 2023-12-18 18:03:18">2023-12-18</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>Categories</span>
-            
-            </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">hexo博客搭建</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"><span class="card-category-list-name">渗透测试</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/metasploit/" style="font-size: 1.1em; color: #999">metasploit</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">数据结构/算法</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">4.6k</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-08-08T04:55:32.707Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By lqkx</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
-  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
-    jinrishici.load(function (result) {
-      if (true) {
-        var sub = "hello World".length == 0 ? new Array() : "hello World".split(',')
-        var content = result.data.content
-        var both = sub.unshift(content)
-        var typed = new Typed('#subtitle', {
-          strings: sub,
-          startDelay: 300,
-          typeSpeed: 150,
-          loop: true,
-          backSpeed: 50,
-        })
-      } else {
-        document.getElementById('subtitle').innerHTML = result.data.content
-      }
-    })
-  })
-}
 
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}
-</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = ture;
-document.body.addEventListener('input', POWERMODE);
-</script><script src="//code.tidio.co/tft2y1n9r6br13t6mmyhcj3uutzsyy9a.js" async="async"></script><script>function onTidioChatApiReady() {
-  window.tidioChatApi.hide();
-  window.tidioChatApi.on("close", function() {
-    window.tidioChatApi.hide();
-  });
-}
-if (window.tidioChatApi) {
-  window.tidioChatApi.on("ready", onTidioChatApiReady);
-} else {
-  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
-}
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></li></ul>
+    </div>
+  </div>
 
-var chatBtnFn = () => {
-  document.getElementById("chat_btn").addEventListener("click", function(){
-    window.tidioChatApi.show();
-    window.tidioChatApi.open();
-  });
-}
-chatBtnFn()
-</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/metasploit/" rel="tag">metasploit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/" rel="tag">数据结构/算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/metasploit/" style="font-size: 10px;">metasploit</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构/算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/18/%E9%87%87%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3Hanoi%E9%97%AE%E9%A2%98/">采用递归和非递归方法求解Hanoi问题</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/18/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B9%8Bmetasploit%E5%88%9D%E8%AF%95%20(2)/">渗透测试之metasploit初试</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/18/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/">插值法总结</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/18/Github%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/">Github 静态博客搭建之绑定域名</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/18/Django%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 lqkx<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
