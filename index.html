@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>lqkx&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="lqkx&#39;s blog">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="lqkx&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="lqkx">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="lqkx&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">lqkx&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-数值分析之插值法总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2025/08/12/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2025-08-12T15:13:27.183Z" itemprop="datePublished">2025-08-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>  前段时间学习了插值法，虽然当时跟着老师的步骤，将公式推导了出来，但是也还有一些问题没有解决，为了防止遗忘，我把它们都记录在这里，主要分为两部分:</p>
+<blockquote>
+<p>1.知识结构梳理</p>
+</blockquote>
+<blockquote>
+<p>2.重要公式推导</p>
+</blockquote>
+<hr>
+<h4 id="知识结构梳理"><a href="#知识结构梳理" class="headerlink" title="知识结构梳理"></a>知识结构梳理</h4><h5 id="概念的引入"><a href="#概念的引入" class="headerlink" title="概念的引入"></a><strong>概念的引入</strong></h5><p><img src="https://img2020.cnblogs.com/blog/1412328/202004/1412328-20200403020651666-1125867375.jpg"></p>
+<p>  当函数$f(x)$很复杂的时候，用一个简单易算的函数$p(x)$近似，其中$p(x)$是用一系列节点和节点处的函数值构造出来的:<br>  一个区间范围插入$n+1$个点 $x_0,x_1…x_n$得到$n+1$个函数值$f(x_i)(i=0,1…n)$<br>如果$p(x)$满足:$p(x_i)=f(x_i)(i=0,1..n),$则称$p(x)$为$f(x)$的$n$次插值函数,求$p(x)$的方法称为插值法<br>$p(x)$常为多项式</p>
+<h5 id="几个重要的插值法"><a href="#几个重要的插值法" class="headerlink" title="几个重要的插值法"></a><strong>几个重要的插值法</strong></h5><h6 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h6><blockquote>
+<p> <em>从一次插值开始，到二次插值，再推广至n次</em></p>
+</blockquote>
+<h6 id="均差与牛顿插值"><a href="#均差与牛顿插值" class="headerlink" title="均差与牛顿插值"></a>均差与牛顿插值</h6><h6 id="样条插值"><a href="#样条插值" class="headerlink" title="样条插值"></a>样条插值</h6><hr>
+<h4 id="公式推导"><a href="#公式推导" class="headerlink" title="公式推导"></a>公式推导</h4><h5 id="拉格朗日插值-基函数法"><a href="#拉格朗日插值-基函数法" class="headerlink" title="拉格朗日插值:基函数法"></a>拉格朗日插值:基函数法</h5><ol>
+<li><p>一次插值:<br>两个插值节点:$(x_0,y_0),(x_1,y_1)$用点斜式$l(x)=y_0+\frac{y_1-y_0}{x_1-x_0}(x-x_0)$<br>整理一下得到</p>
+<blockquote>
+<p>$l(x)=y_0\frac{x-x_1}{x_0-x_1}+y_1\frac{x-x_0}{x_1-x_0}$<br>令$l_0=\frac{x-x_1}{x_0-x_1}\quad         l_1=\frac{x-x_0}{x_1-x_0}$</p>
+</blockquote>
+<p>将公式进一步简化:</p>
+<blockquote>
+<p>$$l_1(x)= \sum_{i=0}^{1} {l_iy_i}$$<br>其中$l_i$就是所谓的基函数。</p>
+</blockquote>
+</li>
+<li><p>二次插值:和一次相同的方法得到</p>
+<blockquote>
+<p>$$l_2(x)= \sum_{i=0}^{2} {l_iy_i}$$</p>
+</blockquote>
+<p>对于其中基函数$l_i$的求法一开始反应不过来，看了PPT才恍然大悟  因为对于插值函数<br>肯定要满足:<br><font color="red">$l_2(x_j)=y_j (j=0,1,2)$</font><br>将$y_j$的三个值分别代入，显然可以得到:</p>
+<blockquote>
+<p>$l_2(x_0)=y_0$<br>$l_2(x_1)=y_1$<br>$l_2(x_2)=y_2$</p>
+</blockquote>
+<p>可以看出在插值函数表达式中，只有和x下标相同的那项被保留了下来。由此可推出:</p>
+<blockquote>
+<p>$l_0(x_0)=1, l_0(x_1)=0, l_0(x_2)=0$<br>$l_1(x_0)=0, l_1(x_1)=1, l_1(x_2)=0$<br>$l_2(x_0)=0, l_2(x_1)=0, l_2(x_2)=1$</p>
+</blockquote>
+<p>满足上面这些条件，求基函数显然变简单了，例如求$l_0$可设$$l_0(x)=A_0(x-x_1)(x-x_2)$$将$x_0$代入这个式子，可以求出</p>
+<blockquote>
+<p>$A_0=\frac{1}{(x_0-x_1)(x_0-x_2)}$</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>$l_0(x)=\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}$</p>
+</blockquote>
+<p>  同理可以求得$l_1(x)，l_2(x)$<br>3.n次插值<br>这一部分已经不大记得清了，当时推导也花了近一节课，最终公式如下:<br>$$l_n(x)=y_0l_0+y_1l_1+…y_nl_n=\sum_{i=0}^{n} {l_iy_i}$$<br>其中:<br>$$<br>l_i=\frac{\overbrace{(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_{i+1})…(x-x_n)}^{n个项}}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x-x_{i+1})…(x-x_n)}\<br>    =\prod_{j≠i,j=0}^{n} \frac{(x-x_j)}{(x_i-x_j)}<br>$$</p>
+<p>注意此公式的分子<font color="red">不含$(x-x_i)$项</font></p>
+<p><del>推导过程就不写了，也记不得了，回头再加上…..</del></p>
+<hr>
+<p>2020.4.2更新  :<br>今天翻笔记本，发现了之前的推导笔记，喜出望外——不用再重新推导一遍了，特来更新一波~<br>  对于n次插值基函数$l_i$的表达式，其实可以从一次，二次表达式中归纳出来，相信读者是和我一样想的，但是为了保持严谨，还是一步一步推导吧！<br>先补充说明一下，这里$l_i(x_j)$有个专门的叫法:拉氏基函数，满足条件:<br>$$l_i(x_j)=\delta_{ij}= \begin{cases}0&amp;&amp;j≠i\ \ 1 &amp;&amp;j=i\end{cases}$$<br>显然每个$l_i$都有$不含x_i的n$个根:<br>$$x_0,x_1…x_{i-1},x_i…x_{n-1},x_n$$<br>可设<br>$$l_i(x)=A_i(x-x_0)(x-x_1)…(x-x_{i-1})(x-x_i)…(x-x{n-1})(x-x_n)$$<br>$$=\prod_{j≠i,j=0}^{n}A_i(x-x_j)$$<br>由$l_i(x_i)=1$，得$$A_i=\frac{1}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>代入上面$l_i$的公式得:<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)},满足l_i(x_j)=\delta_{ij}$$<br>现在已经推导出$l_i$的表达式了，把它代入插值函数<br>$$L_n(x)=\sum_{i=0}^{n}l_i(x)y_i即可得到<br>L_n(x)=\sum_{i=0}^{n}[\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}y_i]$$<br>引入一个记号<br>$$\omega_{n+1}(x)=(x-x_0)(x-x_1)…(x-x_n)$$<br><del>不含(x-x_i)项，这里容易误解，明明是n个点，为什么$\omega$的下标是n+1?也许两者之间并无关联吧，</del><br>emmm…是笔者理解错误，后面求导时发现的,额…继续往下做，话说当老师讲到引入这个记号时，笔者心想大概就是要将$L_n(x)$的表达式转换成含$\omega_{n+1}(x)$的形式了，只是不知道有什么用…继续继续，第一步是对<br>$\omega_{n+1}(x)$求一阶导，根据求导的定义，分别对这n+1项求导，有:<br>$$\omega’<em>{n+1}(x)=(x-x_0)’(x-x_1)…(x-x_n)+(x-x_0)(x-x_1)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_i)’…(x-x_n)+(x-x_0)(x-x_1)…(x-x_n)’$$<br>显然$\omega’<em>{n+1}(x)$的这个式子有$n+1$项<br>好了，第二步:将$x=x_i$代入上式，<font color="red">所有含$(x-x_i)$的项都化为0</font><br>原式化为:<br>$$\omega’</em>{n+1}(x_i)=(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_n)$$<br>可以看出只有对$(x-x_i)$一项求导的留了下来。<br>从而推出<br>$$\omega’<em>{n+1}(x)=(x-x_0)(x-x_1)…(x-x</em>{i-1})(x-x_{i+1})…(x-x_n)$$<br>$$l_i=\frac{(x-x_j)}{\prod_{j≠i,j=0}^{n}(x_i-x_j)}$$<br>$$=\frac{\omega_{n+1}(x)}{(x-x_i) \omega’_{n+1}(x)}$$</p>
+<hr>
+<p>最终n次插值函数$L_n(x)$的表达式为:<br>$$L_n(x)=\sum_{i=0}^{n}y_i \frac{\omega_{n+1}(x)}{(x-x_i)\omega’_{n+1}(x)}$$<br>推导完成!</p>
+<hr>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>  这篇文章花费了远超预计的时间，主要是用手机打latex公式太慢了，另外还有排板，好在总算完成了，数值分析有点复杂，但是只要努力就一定能学好，加油～</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/08/12/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/" data-id="cme8ooa2f0000m8qfgz57cu0x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/08/">八月 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/08/12/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E6%8F%92%E5%80%BC%E6%B3%95%E6%80%BB%E7%BB%93/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 lqkx<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
